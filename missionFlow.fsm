@@ -1,0 +1,786 @@
+/*%FSM<COMPILE "scriptedFSM.cfg, missionFlow">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"init",0,250,-41.092407,-187.543335,48.907593,-137.543335,0.000000,"init"};
+item1[] = {"true",8,218,-41.279938,-65.110413,48.720062,-15.110413,0.000000,"true"};
+item2[] = {"Server_Check",4,218,-216.651611,-186.094406,-126.651611,-136.094391,1.000000,"Server" \n "Check"};
+item3[] = {"Exits",1,250,-357.966980,-187.534882,-267.966980,-137.534897,0.000000,"Exits"};
+item4[] = {"Initial_Setup",2,250,-43.772583,60.775497,46.227432,110.775497,0.000000,"Initial Setup"};
+item5[] = {"Wait",4,218,-48.281990,176.157928,41.718018,226.157928,0.000000,"Wait"};
+item6[] = {"Spawn_Wave",2,250,-49.415836,297.855652,40.584183,347.855652,0.000000,"Spawn Wave"};
+item7[] = {"true",8,218,-46.719124,379.531250,43.280884,429.531250,0.000000,"true"};
+item8[] = {"Condition_Loop_S",2,250,-61.231064,511.680420,51.941833,573.770569,0.000000,"Condition Loop State"};
+item9[] = {"Oven_Retrieved",4,218,-353.515045,704.005005,-263.514923,754.005005,1.000000,"Oven Retrieved"};
+item10[] = {"Food_acquired",4,218,191.566315,604.982300,281.566315,654.982300,1.000000,"Food acquired"};
+item11[] = {"Dad_Escorted",4,218,-46.707954,680.162903,43.292053,730.162903,1.000000,"Dad Escorted"};
+item12[] = {"Create_Food_Obj",2,250,-353.049530,571.053101,-263.049438,621.053101,0.000000,"Create Food Obj."};
+item13[] = {"true",8,218,-352.301422,472.419037,-262.301422,522.419006,0.000000,"true"};
+item14[] = {"Create_Dad_Obj_",2,250,190.773514,505.584137,280.773529,555.584045,0.000000,"Create Dad Obj."};
+item15[] = {"Timeout_Enemies",4,218,-295.644470,279.118286,-140.491104,369.360077,0.000000,"Timeout" \n "Enemies are Dead"};
+item16[] = {"Create_Final_Obj",2,250,299.865784,680.654297,389.865784,730.654297,0.000000,"Create Final Obj"};
+item17[] = {"true",8,218,300.855530,204.355087,390.855530,254.355087,0.000000,"true"};
+item18[] = {"All_Obj__Complete",4,218,-304.856598,801.909668,-136.076416,887.041321,10.000000,"All Obj. Complete" \n "Enemies are Dead"};
+item19[] = {"Final_Assault",2,250,-302.337860,940.594910,-212.337860,990.594910,0.000000,"Final Assault"};
+item20[] = {"Enemies_are_dead",4,218,-165.923004,938.022339,-56.760284,997.603638,0.000000,"Enemies are dead"};
+item21[] = {"Win_",1,250,292.355347,945.981567,382.355347,995.981567,0.000000,"Win!"};
+item22[] = {"Complete_Final_Obj",2,250,-29.437469,941.125610,83.983688,993.254822,0.000000,"Complete Final Obj."};
+item23[] = {"__5s_timer",4,218,125.494476,944.643372,215.494476,994.643372,0.000000,"15s timer"};
+item24[] = {"true",8,218,191.028046,413.660950,281.028046,463.660950,0.000000,"true"};
+item25[] = {"Enemies_Present",4,218,-485.881989,383.135193,-395.881989,433.135193,0.000000,"Enemies" \n "Present"};
+item26[] = {"Fail_Loop",2,250,-615.971680,300.958069,-525.971680,350.958069,0.000000,"Fail Loop"};
+item27[] = {"Kebab_Removed",4,218,-493.039215,249.020416,-403.039215,299.020416,0.000000,"Kebab" \n "Removed"};
+item28[] = {"Kebab_Present",4,218,-757.807312,182.027832,-667.807312,232.027832,0.000000,"Kebab" \n "Present"};
+item29[] = {"Fail_Mission",1,250,-751.923828,290.220886,-661.923767,340.220825,0.000000,"Fail" \n "Mission"};
+item30[] = {"Alert_Players",2,250,-370.475677,351.546387,-280.475647,401.546387,0.000000,"Alert Players"};
+item31[] = {"true",8,218,-240.081726,418.904236,-150.081726,468.904205,0.000000,"true"};
+link0[] = {0,1};
+link1[] = {0,2};
+link2[] = {1,4};
+link3[] = {2,3};
+link4[] = {4,5};
+link5[] = {5,6};
+link6[] = {6,7};
+link7[] = {7,8};
+link8[] = {8,9};
+link9[] = {8,10};
+link10[] = {8,11};
+link11[] = {8,15};
+link12[] = {8,18};
+link13[] = {8,25};
+link14[] = {9,12};
+link15[] = {10,14};
+link16[] = {11,16};
+link17[] = {12,13};
+link18[] = {13,8};
+link19[] = {14,24};
+link20[] = {15,6};
+link21[] = {16,17};
+link22[] = {17,8};
+link23[] = {18,19};
+link24[] = {19,20};
+link25[] = {20,22};
+link26[] = {22,23};
+link27[] = {23,21};
+link28[] = {24,8};
+link29[] = {25,26};
+link30[] = {26,27};
+link31[] = {26,28};
+link32[] = {27,30};
+link33[] = {28,29};
+link34[] = {30,31};
+link35[] = {31,8};
+globals[] = {0.000000,0,0,0,0,640,480,1,52,6316128,0,-753.784607,204.063232,849.374451,-113.679153,920,925,1};
+window[] = {2,-1,-1,-32068,-32000,655,125,765,125,3,938};
+*//*%FSM</HEAD>*/
+class FSM
+{
+        fsmName = "missionFlow";
+        class States
+        {
+                /*%FSM<STATE "init">*/
+                class init
+                {
+                        name = "init";
+                        itemno = 0;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Server_Check">*/
+                                class Server_Check
+                                {
+                                        itemno = 2;
+                                        priority = 1.000000;
+                                        to="Exits";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!isServer"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "true">*/
+                                class true
+                                {
+                                        itemno = 1;
+                                        priority = 0.000000;
+                                        to="Initial_Setup";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Exits">*/
+                class Exits
+                {
+                        name = "Exits";
+                        itemno = 3;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Initial_Setup">*/
+                class Initial_Setup
+                {
+                        name = "Initial_Setup";
+                        itemno = 4;
+                        init = /*%FSM<STATEINIT""">*/"systemChat ""Initial Serv"";" \n
+                         "private _oven = objNull;" \n
+                         "private _food = objNull;" \n
+                         "private _family = objNull;" \n
+                         "private _anchor = FOBAnchor;" \n
+                         "private _anchPos = getPos FOBAnchor;" \n
+                         "[" \n
+                         "	true, // Owners of the task. See wiki page for details" \n
+                         "	[""FOBD"", nil], // Name of the task, along with parent name. Parent name is used for nested tasks" \n
+                         "	[""Defend the FOB against the invading Kebab so you can have Thanksgiving dinner with your family!"", ""Defend FOB Plymouth"", ""marker""], // Information about the task. Honestly don't know what the marker does. Leave it blank. Can also use a CfgTaskDescriptions class (class name in string form) instead of this array." \n
+                         "	_anchor, // Task destination, can also refer to object location. Good method to use is getMarkerPos. Use objNull for task without location." \n
+                         "	""CREATED"", // Task state. Current state of task at the time it's created (usually either ""CREATED"" or ""ASSIGNED"")" \n
+                         "	3, // Task priority. Taken into account when automatically assigning new tasks when previous tasks are completed." \n
+                         "	true, // Show notification. Leave this as true. Set to false to disable task popup" \n
+                         "	""defend"", // Task type. Types can be found in CfgTaskTypes, or at https://community.bistudio.com/wiki/Arma_3_Tasks_Overhaul#Appendix" \n
+                         "	true // Share task. If true, game will report which players have the task selected.	" \n
+                         "] call BIS_fnc_taskCreate;" \n
+                         "" \n
+                         "private _innerradius = 1000;" \n
+                         "private _outerradius = 1500;" \n
+                         "" \n
+                         "private _initSLcount = ({_x getVariable [""squadLead"", false]} count (playableUnits + switchableUnits));" \n
+                         "" \n
+                         "private _timeOut = time + 30;" \n
+                         "private _groupsToSpawn = 2;" \n
+                         "private _possibleLocations = (nearestLocations[getPos cover_map_module, [""NameCity"", ""NameVillage"", ""NameLocal""], 3800]);" \n
+                         "" \n
+                         "_currentArray = 0;" \n
+                         "_objective1Lock = false;" \n
+                         "_objective2Lock = false;" \n
+                         "_objective3Lock = false;" \n
+                         "_defPos = [getPos VA_defPos, getPos VA_defPosW];" \n
+                         "" \n
+                         "private _units = [//_units" \n
+                         "    [//level 1" \n
+                         "		(configfile >> ""CfgGroups"" >> ""East"" >> ""OPF_F"" >> ""Infantry"" >> ""OI_reconTeam"")," \n
+                         "		(configfile >> ""CfgGroups"" >> ""East"" >> ""OPF_F"" >> ""Infantry"" >> ""OI_reconTeam"")," \n
+                         "		(configfile >> ""CfgGroups"" >> ""East"" >> ""OPF_F"" >> ""Infantry"" >> ""OI_reconPatrol"")," \n
+                         "		[""O_recon_TL_F"", ""O_recon_M_F"", ""O_recon_medic_F"", ""O_recon_F"", ""O_recon_LAT_F"", ""O_recon_JTAC_F"", ""O_recon_exp_F"", ""O_Pathfinder"", ""CUP_O_UAZ_MG_CSAT""]," \n
+                         "		[""O_recon_TL_F"", ""O_recon_M_F"", ""O_recon_medic_F"", ""O_recon_F"", ""O_recon_LAT_F"", ""O_recon_JTAC_F"", ""O_recon_exp_F"", ""O_Pathfinder"", ""CUP_O_UAZ_AGS30_CSAT""]," \n
+                         "		[""O_recon_TL_F"", ""O_recon_M_F"", ""O_recon_medic_F"", ""O_recon_F"", ""CUP_O_UAZ_SPG9_CSAT""]" \n
+                         "    ]," \n
+                         "    [//level 2" \n
+                         "		(configfile >> ""CfgGroups"" >> ""East"" >> ""OPF_F"" >> ""Infantry"" >> ""OIA_InfSquad"")," \n
+                         "		(configfile >> ""CfgGroups"" >> ""East"" >> ""OPF_F"" >> ""Infantry"" >> ""OIA_InfSquad"")," \n
+                         "		(configfile >> ""CfgGroups"" >> ""East"" >> ""OPF_F"" >> ""Infantry"" >> ""OIA_InfSquad_Weapons"")," \n
+                         "		(configfile >> ""CfgGroups"" >> ""East"" >> ""OPF_F"" >> ""Infantry"" >> ""OIA_InfTeam"")," \n
+                         "		[""O_Soldier_F"", ""O_Soldier_LAT_F"", ""O_soldier_M_F"", ""O_Soldier_TL_F"", ""O_Soldier_AR_F"", ""O_Soldier_A_F"", ""O_medic_F"", ""O_Soldier_SL_F"", ""CUP_O_BRDM2_CSAT""]," \n
+                         "		[""O_Soldier_SL_F"", ""O_Soldier_AR_F"", ""O_Soldier_GL_F"", ""O_soldier_M_F"", ""O_Soldier_AT_F"", ""O_Soldier_AAT_F"", ""O_Soldier_A_F"", ""O_medic_F"", ""CUP_O_BTR60_CSAT""]," \n
+                         "		[""O_Soldier_TL_F"", ""O_Soldier_AR_F"", ""O_Soldier_GL_F"", ""O_Soldier_LAT_F"", ""CUP_O_BMP2_CSAT""]," \n
+                         "		[""O_recon_TL_F"", ""O_recon_M_F"", ""O_recon_medic_F"", ""O_recon_F"", ""O_recon_LAT_F"", ""O_recon_JTAC_F"", ""O_recon_exp_F"", ""O_Pathfinder"", ""CUP_O_UAZ_MG_CSAT""]," \n
+                         "		[""O_recon_TL_F"", ""O_recon_M_F"", ""O_recon_medic_F"", ""O_recon_F"", ""O_recon_LAT_F"", ""O_recon_JTAC_F"", ""O_recon_exp_F"", ""O_Pathfinder"", ""CUP_O_UAZ_AGS30_CSAT""]," \n
+                         "		[""O_recon_TL_F"", ""O_recon_M_F"", ""O_recon_medic_F"", ""O_recon_F"", ""CUP_O_UAZ_SPG9_CSAT""]" \n
+                         "    ]," \n
+                         "	 [//level 3" \n
+                         "		(configfile >> ""CfgGroups"" >> ""East"" >> ""OPF_F"" >> ""Infantry"" >> ""OIA_InfSquad"")," \n
+                         "		(configfile >> ""CfgGroups"" >> ""East"" >> ""OPF_F"" >> ""Infantry"" >> ""OIA_InfSquad"")," \n
+                         "		(configfile >> ""CfgGroups"" >> ""East"" >> ""OPF_F"" >> ""Infantry"" >> ""OIA_InfSquad_Weapons"")," \n
+                         "		(configfile >> ""CfgGroups"" >> ""East"" >> ""OPF_F"" >> ""Infantry"" >> ""OIA_InfTeam"")," \n
+                         "		[""O_Soldier_F"", ""O_Soldier_LAT_F"", ""O_soldier_M_F"", ""O_Soldier_TL_F"", ""O_Soldier_AR_F"", ""O_Soldier_A_F"", ""O_medic_F"", ""O_Soldier_SL_F"", ""CUP_O_BRDM2_CSAT""]," \n
+                         "		[""O_Soldier_SL_F"", ""O_Soldier_AR_F"", ""O_Soldier_GL_F"", ""O_soldier_M_F"", ""O_Soldier_AT_F"", ""O_Soldier_AAT_F"", ""O_Soldier_A_F"", ""O_medic_F"", ""CUP_O_BTR60_CSAT""]," \n
+                         "		[""O_Soldier_TL_F"", ""O_Soldier_AR_F"", ""O_Soldier_GL_F"", ""O_Soldier_LAT_F"", ""CUP_O_BMP2_CSAT""]," \n
+                         "		[""O_Soldier_SL_F"", ""O_Soldier_AR_F"", ""O_HeavyGunner_F"", ""O_Soldier_AAR_F"", ""O_soldier_M_F"", ""O_Sharpshooter_F"", ""O_Soldier_LAT_F"", ""O_medic_F"",""CUP_O_T55_CSAT""]," \n
+                         "		[""O_Soldier_SL_F"", ""O_Soldier_AR_F"", ""O_Soldier_GL_F"", ""O_soldier_M_F"", ""O_Soldier_AT_F"", ""O_Soldier_AAT_F"", ""O_Soldier_A_F"", ""O_medic_F"", ""CUP_O_BTR90_RU""]" \n
+                         "	 ]" \n
+                         "];" \n
+                         "" \n
+                         "//Clear a box" \n
+                         "_fnc_clearBox = {" \n
+                         "	params [""_box""];" \n
+                         "	clearItemCargoGlobal _box;" \n
+                         "	clearMagazineCargoGlobal _box;" \n
+                         "	clearWeaponCargoGlobal _box;" \n
+                         "	clearBackpackCargoGlobal _box;" \n
+                         "	true;" \n
+                         "};" \n
+                         "" \n
+                         "//Get Random location func" \n
+                         "_fnc_randomLocation = {" \n
+                         "	private _rndLoc = selectRandom(_possibleLocations);" \n
+                         "	private _buildings = (locationPosition _rndLoc) nearObjects[""House"", 600];" \n
+                         "	while {count _buildings == 0} do {" \n
+                         "		_possibleLocations deleteAt (_possibleLocations find _rndLoc);" \n
+                         "		private _rndLoc = selectRandom(_possibleLocations);" \n
+                         "		private _buildings = (locationPosition _rndLoc) nearObjects[""House"", 600];" \n
+                         "	};" \n
+                         "	[_rndLoc, _buildings]" \n
+                         "};" \n
+                         "" \n
+                         "//Building for objective" \n
+                         "_fnc_randBuildingPos = {" \n
+                         "	params[""_data""];" \n
+                         "	private _building = selectRandom(_data select 1);" \n
+                         "	private _buildingPositions = [_building] call BIS_fnc_buildingPositions;" \n
+                         "	if (count _buildingPositions == 0) then { //Either select random position within building or set only one position 25 meters from building" \n
+                         "		_buildingPositions = [" \n
+                         "			[" \n
+                         "				_building getPos[25, random(360)], " \n
+                         "				0, " \n
+                         "				100, " \n
+                         "				3" \n
+                         "			] call BIS_fnc_findSafePos" \n
+                         "		]" \n
+                         "	};" \n
+                         "	selectRandom(_buildingPositions)" \n
+                         "};" \n
+                         "" \n
+                         "//Marker func" \n
+                         "_fnc_objMarker = {" \n
+                         "	params[""_pos"", ""_name""];" \n
+                         "	private _mark = createMarker[_name, _pos getPos[50+(random 50), random(360)]];" \n
+                         "	_mark setMarkerShape ""ELLIPSE"";" \n
+                         "	_mark setMarkerSize [300, 300];" \n
+                         "	_mark setMarkerBrush ""SolidBorder"";" \n
+                         "	private _markRelPos = (getMarkerPos _mark) getPos[300, 120];" \n
+                         "	[_mark, _markRelPos]" \n
+                         "};" \n
+                         "" \n
+                         "//Patrols func" \n
+                         "_fnc_createGuards = {" \n
+                         "	params[""_objPos""];" \n
+                         "	private _guards = [];" \n
+                         "	for[{_i = 0}, {_i < 4}, {_i = _i + 1}] do {" \n
+                         "		private _safePos = [_objPos getPos[30+random 300,random 360],0, 50, 2] call BIS_fnc_findSafePos;" \n
+                         "		private _units = selectRandom(_units select _currentArray);" \n
+                         "		private _ranks = [];" \n
+                         "		private _relpos = [];" \n
+                         "		if (typeName _units == ""ARRAY"") then {" \n
+                         "			private _i = -1;" \n
+                         "			private _step = 4;" \n
+                         "			_ranks = _units apply { ""PRIVATE"" };" \n
+                         "			_ranks set[0, ""SERGEANT""];" \n
+                         "			_relpos = _units apply { _i = _i + 1; [_i * _step, _i * _step, 0] };" \n
+                         "		};" \n
+                         "		private _guardGroup = [_safePos, EAST, _units, _relpos, _ranks] call BIS_fnc_spawnGroup;" \n
+                         "		{" \n
+                         "			_wp = _guardGroup addWaypoint[leader _guardGroup, 300];" \n
+                         "			_wp setWaypointType _x;" \n
+                         "			_wp setWaypointSpeed ""Limited"";" \n
+                         "			_wp setWaypointBehaviour ""Safe"";" \n
+                         "		} foreach [""MOVE"", ""MOVE"", ""MOVE"", ""MOVE"", ""CYCLE""];" \n
+                         "		_guards = _guards + (units _guardGroup);" \n
+                         "	};" \n
+                         "	_guards" \n
+                         "};" \n
+                         "//Garrison func" \n
+                         "_fnc_createGarrison = {" \n
+                         "	params[""_data""];" \n
+                         "	private _classes = [""O_Soldier_GL_F"", ""O_Soldier_AR_F"", ""O_Soldier_LAT_F"", ""O_medic_F"", ""O_Soldier_M_F"", ""O_Soldier_F""];" \n
+                         "	private _positions = (_data select 1) apply { [_x] call BIS_fnc_buildingPositions };" \n
+                         "	private _garrisonGroup = createGroup east;" \n
+                         "	for[{_i = 0}, {_i < 20}, {_i = _i + 1}] do {" \n
+                         "		_rBuilding = selectRandom _positions;" \n
+                         "		while { count _rBuilding == 0} do {" \n
+                         "			_positions deleteAt (_positions find _rBuilding);" \n
+                         "			_rBuilding = selectRandom(_positions);" \n
+                         "		};" \n
+                         "		_rPos = selectRandom _rBuilding;" \n
+                         "		_guard = _garrisonGroup createUnit[selectRandom _classes, _rPos, [],0, ""CAN_COLLIDE""];" \n
+                         "		_guard forceSpeed 0;" \n
+                         "		_guard setUnitPos ""UP"";" \n
+                         "		_rBuilding deleteAt (_rBuilding find _rPos);" \n
+                         "	};" \n
+                         "	(units _garrisonGroup)" \n
+                         "};" \n
+                         "" \n
+                         "" \n
+                         "//Create first objective" \n
+                         "private _locationData = call _fnc_randomLocation;" \n
+                         "private _obj1Pos = [_locationData] call _fnc_randBuildingPos;" \n
+                         "_oven = createVehicle[""Box_IED_Exp_F"", _obj1Pos, [], 0, ""CAN_COLLIDE""];" \n
+                         "_oven allowDamage false;" \n
+                         "[_oven] call _fnc_clearBox;" \n
+                         "_obj1Marker = [_oven, ""oven_pos""] call _fnc_objMarker;" \n
+                         "_obj1Guards = [_obj1Pos] call _fnc_createGuards;" \n
+                         "_obj1Guards = _obj1Guards + ([_locationData] call _fnc_createGarrison);" \n
+                         "[" \n
+                         "	true, // Owners of the task. See wiki page for details" \n
+                         "	[""Obj1"", nil], // Name of the task, along with parent name. Parent name is used for nested tasks" \n
+                         "	[""Find the oven so you can cook your Thanksgiving food!"", ""Locate Oven""], // Information about the task. Honestly don't know what the marker does. Leave it blank. Can also use a CfgTaskDescriptions class (class name in string form) instead of this array." \n
+                         "	_obj1Marker select 1, // Task destination, can also refer to object location. Good method to use is getMarkerPos. Use objNull for task without location." \n
+                         "	""ASSIGNED"", // Task state. Current state of task at the time it's created (usually either ""CREATED"" or ""ASSIGNED"")" \n
+                         "	0, // Task priority. Taken into account when automatically assigning new tasks when previous tasks are completed." \n
+                         "	true, // Show notification. Leave this as true. Set to false to disable task popup" \n
+                         "	""search"", // Task type. Types can be found in CfgTaskTypes, or at https://community.bistudio.com/wiki/Arma_3_Tasks_Overhaul#Appendix" \n
+                         "	true // Share task. If true, game will report which players have the task selected.	" \n
+                         "] call BIS_fnc_taskCreate;" \n
+                         ""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Wait">*/
+                                class Wait
+                                {
+                                        itemno = 5;
+                                        priority = 0.000000;
+                                        to="Spawn_Wave";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"time > _timeOut"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Spawn_Wave">*/
+                class Spawn_Wave
+                {
+                        name = "Spawn_Wave";
+                        itemno = 6;
+                        init = /*%FSM<STATEINIT""">*/"systemChat ""Attack"";" \n
+                         "" \n
+                         "_timeOut = time + 600;" \n
+                         "_unitCounter = [];" \n
+                         "_blacklistPos = (playableUnits + switchableUnits) apply { [getPos _x, 600] };" \n
+                         "[""WaveIndicator"", []] call BIS_fnc_showNotification" \n
+                         "" \n
+                         "for [{_i = 0}, {_i < _initSLcount * _groupsToSpawn}, {_i = _i + 1}] do {" \n
+                         "	private _spawnPos = [_anchPos, _innerRadius, _outerRadius, 3, 0, 25, 0, _blacklistPos, _defPos] call BIS_fnc_findSafePos;" \n
+                         "	private _units = selectRandom(_units select _currentArray);" \n
+                         "	private _ranks = [];" \n
+                         "	private _relpos = [];" \n
+                         "	if (typeName _units == ""ARRAY"") then {" \n
+                         "		private _i = -1;" \n
+                         "		private _step = 4;" \n
+                         "		_ranks = _units apply { ""PRIVATE"" };" \n
+                         "		_ranks set[0, ""SERGEANT""];" \n
+                         "		_relpos = _units apply { _i = _i + 1; [_i * _step, _i * _step, 0] };" \n
+                         "	};" \n
+                         "	private _spawnedGroup = [_spawnPos, EAST, _units, _relpos, _ranks] call BIS_fnc_spawnGroup;" \n
+                         "	_unitCounter = _unitCounter + (units _spawnedGroup);" \n
+                         "	_spawnedGroup setSpeedMode ""FULL"";" \n
+                         "	_wp1 = _spawnedGroup addWaypoint [_AnchPos, 200];" \n
+                         "	_wp1 setWaypointType ""MOVE"";" \n
+                         "	_wp1 setWaypointCombatMode ""YELLOW"";" \n
+                         "	_wp2 = _spawnedGroup addWaypoint [_AnchPos, 200];" \n
+                         "	_wp2 setWaypointType ""GUARD"";" \n
+                         "	_wp2 setWaypointCombatMode ""YELLOW"";" \n
+                         "	_spawnedGroup setGroupOwner (owner hc);" \n
+                         "};" \n
+                         "" \n
+                         "systemChat format[""Spawned a total of %1 units."", count _unitCounter];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "true">*/
+                                class true
+                                {
+                                        itemno = 7;
+                                        priority = 0.000000;
+                                        to="Condition_Loop_S";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Condition_Loop_S">*/
+                class Condition_Loop_S
+                {
+                        name = "Condition_Loop_S";
+                        itemno = 8;
+                        init = /*%FSM<STATEINIT""">*/"" \n
+                         "systemChat ""Condition Loop"";" \n
+                         "true;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "All_Obj__Complete">*/
+                                class All_Obj__Complete
+                                {
+                                        itemno = 18;
+                                        priority = 10.000000;
+                                        to="Final_Assault";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_objective1Lock && _objective2Lock && _objective3Lock && {{ alive _x } count _unitCounter < 10}" \n
+                                         ""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Dad_Escorted">*/
+                                class Dad_Escorted
+                                {
+                                        itemno = 11;
+                                        priority = 1.000000;
+                                        to="Create_Final_Obj";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"[""Obj3""] call BIS_fnc_taskExists && !_objective3Lock && {_family distance canteen < 5}"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Food_acquired">*/
+                                class Food_acquired
+                                {
+                                        itemno = 10;
+                                        priority = 1.000000;
+                                        to="Create_Dad_Obj_";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"[""Obj2""] call BIS_fnc_taskExists && !_objective2Lock && {_food distance canteen < 5}" \n
+                                         ""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Oven_Retrieved">*/
+                                class Oven_Retrieved
+                                {
+                                        itemno = 9;
+                                        priority = 1.000000;
+                                        to="Create_Food_Obj";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!_objective1Lock && {_oven distance canteen < 5}" \n
+                                         ""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Enemies_Present">*/
+                                class Enemies_Present
+                                {
+                                        itemno = 25;
+                                        priority = 0.000000;
+                                        to="Fail_Loop";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"{ alive _x && _x distance FOBAnchor < 100} count _unitCounter > count (playableUnits+switchableUnits)"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Timeout_Enemies">*/
+                                class Timeout_Enemies
+                                {
+                                        itemno = 15;
+                                        priority = 0.000000;
+                                        to="Spawn_Wave";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"time > _timeout && {{ alive _x } count _unitCounter < 10}" \n
+                                         ""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Create_Food_Obj">*/
+                class Create_Food_Obj
+                {
+                        name = "Create_Food_Obj";
+                        itemno = 12;
+                        init = /*%FSM<STATEINIT""">*/"systemChat ""Obj1"";" \n
+                         "private _groupsToSpawn = 3;" \n
+                         "_currentArray = 1;" \n
+                         "_objective1Lock = true;" \n
+                         "deleteMarker (_obj1Marker select 0);" \n
+                         "{ deleteVehicle (vehicle _x); deleteVehicle _x } foreach _obj1Guards;" \n
+                         "[""Obj1"", ""SUCCEEDED""] spawn BIS_fnc_taskSetState;" \n
+                         "" \n
+                         "private _locationData = call _fnc_randomLocation;" \n
+                         "private _obj2Pos = [_locationData] call _fnc_randBuildingPos;" \n
+                         "_food = createVehicle[""Box_IND_WpsLaunch_F"", _obj2Pos, [], 0, ""CAN_COLLIDE""];" \n
+                         "_food allowDamage false;" \n
+                         "[_food] call _fnc_clearBox;" \n
+                         "_obj2Marker = [_food, ""food_pos""] call _fnc_objMarker;" \n
+                         "_obj2Guards = [_obj2Pos] call _fnc_createGuards;" \n
+                         "_obj2Guards = _obj2Guards + ([_locationData] call _fnc_createGarrison);" \n
+                         "" \n
+                         "[" \n
+                         "	true, // Owners of the task. See wiki page for details" \n
+                         "	[""Obj2"", nil], // Name of the task, along with parent name. Parent name is used for nested tasks" \n
+                         "	[""A feast is nothing without food! Go and find the enemy picnic box and bring it back to base."", ""Locate Food""], // Information about the task. Honestly don't know what the marker does. Leave it blank. Can also use a CfgTaskDescriptions class (class name in string form) instead of this array." \n
+                         "	_obj2Marker select 1, // Task destination, can also refer to object location. Good method to use is getMarkerPos. Use objNull for task without location." \n
+                         "	""ASSIGNED"", // Task state. Current state of task at the time it's created (usually either ""CREATED"" or ""ASSIGNED"")" \n
+                         "	1, // Task priority. Taken into account when automatically assigning new tasks when previous tasks are completed." \n
+                         "	true, // Show notification. Leave this as true. Set to false to disable task popup" \n
+                         "	""search"", // Task type. Types can be found in CfgTaskTypes, or at https://community.bistudio.com/wiki/Arma_3_Tasks_Overhaul#Appendix" \n
+                         "	true // Share task. If true, game will report which players have the task selected.	" \n
+                         "] call BIS_fnc_taskCreate;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "true">*/
+                                class true
+                                {
+                                        itemno = 13;
+                                        priority = 0.000000;
+                                        to="Condition_Loop_S";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Create_Dad_Obj_">*/
+                class Create_Dad_Obj_
+                {
+                        name = "Create_Dad_Obj_";
+                        itemno = 14;
+                        init = /*%FSM<STATEINIT""">*/"systemChat ""Obj2"";" \n
+                         "private _groupsToSpawn = 4;" \n
+                         "deleteMarker (_obj2Marker select 0);" \n
+                         "_currentArray = 2;" \n
+                         "_objective2Lock = true;" \n
+                         "{ deleteVehicle (vehicle _x); deleteVehicle _x } foreach _obj2Guards;" \n
+                         "" \n
+                         "private _locationData = call _fnc_randomLocation;" \n
+                         "private _obj3Pos = [_locationData] call _fnc_randBuildingPos;" \n
+                         "_family = (createGroup civilian) createUnit[""C_Man_Fisherman_01_F"", _obj3Pos, [], 0, ""CAN_COLLIDE""];" \n
+                         "_family allowDamage false;" \n
+                         "_family forceSpeed 0;" \n
+                         "[_family] call _fnc_clearBox;" \n
+                         "_obj3Marker = [_family, ""food_pos""] call _fnc_objMarker;" \n
+                         "_obj3Guards = [_obj3Pos] call _fnc_createGuards;" \n
+                         "_obj3Guards = _obj3Guards + ([_locationData] call _fnc_createGarrison);" \n
+                         "" \n
+                         "[""Obj2"", ""SUCCEEDED""] spawn BIS_fnc_taskSetState;" \n
+                         "[" \n
+                         "	true, // Owners of the task. See wiki page for details" \n
+                         "	[""Obj3"", nil], // Name of the task, along with parent name. Parent name is used for nested tasks" \n
+                         "	[""Find your faggot Dad and bring him to the canteen."", ""Locate Dad""], // Information about the task. Honestly don't know what the marker does. Leave it blank. Can also use a CfgTaskDescriptions class (class name in string form) instead of this array." \n
+                         "	_obj3Marker select 1, // Task destination, can also refer to object location. Good method to use is getMarkerPos. Use objNull for task without location." \n
+                         "	""ASSIGNED"", // Task state. Current state of task at the time it's created (usually either ""CREATED"" or ""ASSIGNED"")" \n
+                         "	2, // Task priority. Taken into account when automatically assigning new tasks when previous tasks are completed." \n
+                         "	true, // Show notification. Leave this as true. Set to false to disable task popup" \n
+                         "	""search"", // Task type. Types can be found in CfgTaskTypes, or at https://community.bistudio.com/wiki/Arma_3_Tasks_Overhaul#Appendix" \n
+                         "	true // Share task. If true, game will report which players have the task selected.	" \n
+                         "] call BIS_fnc_taskCreate;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "true">*/
+                                class true
+                                {
+                                        itemno = 24;
+                                        priority = 0.000000;
+                                        to="Condition_Loop_S";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Create_Final_Obj">*/
+                class Create_Final_Obj
+                {
+                        name = "Create_Final_Obj";
+                        itemno = 16;
+                        init = /*%FSM<STATEINIT""">*/"systemChat ""Obj3"";" \n
+                         "{ deleteVehicle (vehicle _x); deleteVehicle _x } foreach _obj3Guards;" \n
+                         "deleteMarker (_obj3Marker select 0);" \n
+                         "_objective3Lock = true;" \n
+                         "[""Obj3"", ""SUCCEEDED""] spawn BIS_fnc_taskSetState;" \n
+                         "[""FOBD"", ""SUCCEEDED""] spawn BIS_fnc_taskSetState;" \n
+                         "" \n
+                         "[" \n
+                         "	true, // Owners of the task. See wiki page for details" \n
+                         "	[""Obj4"", nil], // Name of the task, along with parent name. Parent name is used for nested tasks" \n
+                         "	[""Brace for the Thanksiving Day Defense."", ""Survive.""], // Information about the task. Honestly don't know what the marker does. Leave it blank. Can also use a CfgTaskDescriptions class (class name in string form) instead of this array." \n
+                         "	FOBAnchor, // Task destination, can also refer to object location. Good method to use is getMarkerPos. Use objNull for task without location." \n
+                         "	""ASSIGNED"", // Task state. Current state of task at the time it's created (usually either ""CREATED"" or ""ASSIGNED"")" \n
+                         "	1, // Task priority. Taken into account when automatically assigning new tasks when previous tasks are completed." \n
+                         "	true, // Show notification. Leave this as true. Set to false to disable task popup" \n
+                         "	""kill"", // Task type. Types can be found in CfgTaskTypes, or at https://community.bistudio.com/wiki/Arma_3_Tasks_Overhaul#Appendix" \n
+                         "	true // Share task. If true, game will report which players have the task selected.	" \n
+                         "] call BIS_fnc_taskCreate;" \n
+                         "private _groupsToSpawn = 3;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "true">*/
+                                class true
+                                {
+                                        itemno = 17;
+                                        priority = 0.000000;
+                                        to="Condition_Loop_S";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Final_Assault">*/
+                class Final_Assault
+                {
+                        name = "Final_Assault";
+                        itemno = 19;
+                        init = /*%FSM<STATEINIT""">*/"systemChat ""Final Assault"";" \n
+                         "" \n
+                         "_unitCounter = [];" \n
+                         "_blacklistPos = (playableUnits + switchableUnits) apply { [getPos _x, 600] };" \n
+                         "" \n
+                         "for [{_i = 0}, {_i < _initSLcount * _groupsToSpawn}, {_i = _i + 1}] do {" \n
+                         "		private _spawnPos = [_anchPos, _innerRadius, _outerRadius, 3, 0, 25, 0, _blacklistPos, _defPos] call BIS_fnc_findSafePos;" \n
+                         "		private _units = selectRandom(_units select _currentArray);" \n
+                         "		private _ranks = [];" \n
+                         "		private _relpos = [];" \n
+                         "		if (typeName _units == ""ARRAY"") then {" \n
+                         "			private _i = -1;" \n
+                         "			private _step = 4;" \n
+                         "			_ranks = _units apply { ""PRIVATE"" };" \n
+                         "			_ranks set[0, ""SERGEANT""];" \n
+                         "			_relpos = _units apply { _i = _i + 1; [_i * _step, _i * _step, 0] };" \n
+                         "		};" \n
+                         "		private _spawnedGroup = [_spawnPos, EAST, _units, _relpos, _ranks] call BIS_fnc_spawnGroup;" \n
+                         "		_unitCounter = _unitCounter + (units _spawnedGroup);" \n
+                         "		_spawnedGroup setSpeedMode ""FULL"";" \n
+                         "		_wp1 = _spawnedGroup addWaypoint [_AnchPos, 200];" \n
+                         "		_wp1 setWaypointType ""MOVE"";" \n
+                         "		_wp1 setWaypointCombatMode ""YELLOW"";" \n
+                         "		_wp2 = _spawnedGroup addWaypoint [_AnchPos, 200];" \n
+                         "		_wp2 setWaypointType ""GUARD"";" \n
+                         "		_wp2 setWaypointCombatMode ""YELLOW"";" \n
+                         "		_spawnedGroup setGroupOwner (owner hc);" \n
+                         "};" \n
+                         "" \n
+                         "systemChat format[""Spawned a total of %1 units."", count _unitCounter];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Enemies_are_dead">*/
+                                class Enemies_are_dead
+                                {
+                                        itemno = 20;
+                                        priority = 0.000000;
+                                        to="Complete_Final_Obj";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"{ alive _x } count _unitCounter < 10"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Win_">*/
+                class Win_
+                {
+                        name = "Win_";
+                        itemno = 21;
+                        init = /*%FSM<STATEINIT""">*/"""End1"" call BIS_fnc_endMissionServer;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Complete_Final_Obj">*/
+                class Complete_Final_Obj
+                {
+                        name = "Complete_Final_Obj";
+                        itemno = 22;
+                        init = /*%FSM<STATEINIT""">*/"systemChat ""MF"";" \n
+                         "" \n
+                         "" \n
+                         "[""Obj4"", ""SUCCEEDED""] spawn BIS_fnc_taskSetState;" \n
+                         "_fTimer = time + 15;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "__5s_timer">*/
+                                class __5s_timer
+                                {
+                                        itemno = 23;
+                                        priority = 0.000000;
+                                        to="Win_";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"time > _fTimer"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Fail_Loop">*/
+                class Fail_Loop
+                {
+                        name = "Fail_Loop";
+                        itemno = 26;
+                        init = /*%FSM<STATEINIT""">*/"_failTimer = time + 120;" \n
+                         "[""FOBOverrun"", []] call BIS_fnc_showNotification;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Kebab_Present">*/
+                                class Kebab_Present
+                                {
+                                        itemno = 28;
+                                        priority = 0.000000;
+                                        to="Fail_Mission";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"time > _failTimer"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Kebab_Removed">*/
+                                class Kebab_Removed
+                                {
+                                        itemno = 27;
+                                        priority = 0.000000;
+                                        to="Alert_Players";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"{ alive _x && _x distance FOBAnchor < 100} count _unitCounter < count (playableUnits+switchableUnits)"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Fail_Mission">*/
+                class Fail_Mission
+                {
+                        name = "Fail_Mission";
+                        itemno = 29;
+                        init = /*%FSM<STATEINIT""">*/"""End2"" call BIS_fnc_endMissionServer;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Alert_Players">*/
+                class Alert_Players
+                {
+                        name = "Alert_Players";
+                        itemno = 30;
+                        init = /*%FSM<STATEINIT""">*/"[""FOBCleared"", []] call BIS_fnc_showNotification;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "true">*/
+                                class true
+                                {
+                                        itemno = 31;
+                                        priority = 0.000000;
+                                        to="Condition_Loop_S";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+        };
+        initState="init";
+        finalStates[] =
+        {
+                "Exits",
+                "Win_",
+                "Fail_Mission",
+        };
+};
+/*%FSM</COMPILE>*/

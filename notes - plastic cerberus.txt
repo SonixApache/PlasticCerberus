@@ -1,0 +1,4 @@
+remove roadblock task
+do the naked gear thing
+add defibs
+check mission loss params?
