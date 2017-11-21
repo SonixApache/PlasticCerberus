@@ -301,8 +301,8 @@ class loadouts
 		
 		linkedItems[] = {"ItemMap", "ItemCompass", "ItemWatch", "ItemRadio", "ItemMicroDAGR"}; 
 		uniformItems[] = {{"ACE_Banana",1},{"FHQ_optic_AC11704",1},{"HandGrenade", 2},{"11Rnd_45ACP_Mag",1},{"ACE_bloodIV_250",1}}; 
-		vestItems[] = {{"ACE_quikclot", 20},{"ACE_elasticBandage", 20},{"ACE_epinephrine", 5},{"ACE_tourniquet", 5},{"ACE_morphine", 10},{"ACE_bloodIV_250", 5},{"SmokeShell", 4}}; 
-		backpackItems[] = {{"ACE_quikclot", 40},{"ACE_elasticBandage", 40},{"ACE_epinephrine", 10},{"ACE_tourniquet", 10},{"ACE_morphine", 20},{"ACE_bloodIV_500", 4},{"ACE_bloodIV_1000", 2},{"ACE_personalAidKit", 4},{"SmokeShell", 4},{"SmokeShell",2},{"SmokeShellBlue",1},{"ACE_surgicalKit",1}}; 
+		vestItems[] = {{"ACE_quikclot", 20},{"ACE_elasticBandage", 20},{"ACE_epinephrine", 5},{"ACE_tourniquet", 5},{"ACE_morphine", 10},{"ACE_bloodIV_250", 5},{"SmokeShell", 4},{"hlc_30rnd_556x45_M", 6}}; 
+		backpackItems[] = {{"ACE_quikclot", 40},{"ACE_elasticBandage", 40},{"ACE_epinephrine", 10},{"ACE_tourniquet", 10},{"ACE_morphine", 20},{"ACE_bloodIV_500", 4},{"ACE_bloodIV_1000", 2},{"ACE_personalAidKit", 4},{"SmokeShell", 4},{"SmokeShell",2},{"SmokeShellBlue",1},{"ACE_surgicalKit",1},{"ACE_defibrillator",1}}; 
 		
 		basicMedUniform[] = {}; 
 		basicMedVest[] = {}; 
