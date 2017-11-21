@@ -5,37 +5,6 @@
 // Also supports sub-loadout randomization. If a loadout has sub-classes defined, the script will automatically select one of them to apply to the unit.
 class loadouts
 {
-	class default
-	{
-		displayName = "Default loadout"; 
-		
-		weapons[] = {"CUP_arifle_Mk16_STD_FG_black", "", "hgun_Pistol_heavy_01_F", "Binocular"}; 
-		primaryWeaponItems[] = {"CUP_muzzle_snds_SCAR_L", "acc_pointer_IR", "optic_Hamr","hlc_30rnd_556x45_M"}; 
-		secondaryWeaponItems[] = {""}; 
-		handgunItems[] = {"optic_MRD","11Rnd_45ACP_Mag"}; 
-		
-		uniformClass = "TFA_wood";
-		headgearClass = "TFAX_H_HelmetIA_US_wood";
-		facewearClass = "";
-		vestClass = "TFAx_PlateCarrier_grn";
-		backpackClass = "B_Kitbag_rgr";
-		
-		linkedItems[] = {"ItemMap", "ItemCompass", "ItemWatch", "ItemRadio", "ItemMicroDAGR"}; 
-		uniformItems[] = {"ACE_Banana","FHQ_optic_AC11704",{"HandGrenade", 2},"11Rnd_45ACP_Mag"}; 
-		vestItems[] = {"1Rnd_HE_Grenade_shell",{"hlc_30rnd_556x45_M", 10}}; 
-		backpackItems[] = {{"ACE_quikclot",8}, {"ACE_elasticBandage",6},{"ACE_packingBandage",2},"ACE_bloodIV_250","ACE_tourniquet",{"ACE_morphine",2},"ACE_epinephrine",{"SmokeShell",2},"SmokeShellBlue","hlc_200rnd_556x45_M_SAW"}; 
-		
-		basicMedUniform[] = {}; 
-		basicMedVest[] = {}; 
-		basicMedBackpack[] = {}; 
-		
-		advMedUniform[] = {}; 
-		advMedVest[] = {}; 
-		advMedBackpack[] = {}; 
-		
-		
-	};
-	
 	class B_Soldier_SL_F
 	{
 		displayName = "Squadleader"; 
@@ -52,9 +21,9 @@ class loadouts
 		backpackClass = "B_Kitbag_rgr";
 		
 		linkedItems[] = {"ItemMap", "ItemCompass", "ItemWatch", "ItemRadio", "ItemAndroid"}; 
-		uniformItems[] = {"ACE_Banana",{"ACE_CableTie",4}, "FHQ_optic_AC11704",{"HandGrenade", 2},"11Rnd_45ACP_Mag"}; 
+		uniformItems[] = {{"ACE_Banana",1},{"ACE_CableTie",4}, {"FHQ_optic_AC11704",1},{"HandGrenade", 2},{"11Rnd_45ACP_Mag",1}}; 
 		vestItems[] = {{"1Rnd_HE_Grenade_shell", 2},{"hlc_30rnd_556x45_M", 9},{"1Rnd_Smoke_Grenade_shell", 2},{"1Rnd_SmokeRed_Grenade_shell", 2}}; 
-		backpackItems[] = {{"ACE_quikclot",8}, {"ACE_elasticBandage",6},{"ACE_packingBandage",2},"ACE_bloodIV_250","ACE_tourniquet",{"ACE_morphine",2},"ACE_epinephrine",{"SmokeShell",2},"SmokeShellBlue","hlc_200rnd_556x45_M_SAW"}; 
+		backpackItems[] = {{"ACE_quikclot",8}, {"ACE_elasticBandage",6},{"ACE_packingBandage",2},{"ACE_bloodIV_250",1},{"ACE_tourniquet",1},{"ACE_morphine",2},{"ACE_epinephrine",1},{"SmokeShell",2},{"SmokeShellBlue",1},{"hlc_200rnd_556x45_M_SAW",1}}; 
 		
 		basicMedUniform[] = {}; 
 		basicMedVest[] = {}; 
@@ -72,7 +41,7 @@ class loadouts
 		displayName = "Autorifleman"; 
 		
 		weapons[] = {"hlc_m249_pip4", "", "hgun_Pistol_heavy_01_F", "Binocular"}; 
-		primaryWeaponItems[] = {"muzzle_snds_H_MG_blk_F", "acc_pointer_IR", "optic_Hamr","hlc_200rnd_556x45_M_SAW"}; 
+		primaryWeaponItems[] = {"muzzle_snds_H_MG_blk_F", "acc_pointer_IR", "optic_Hamr",{"hlc_200rnd_556x45_M_SAW",1}}; 
 		secondaryWeaponItems[] = {""}; 
 		handgunItems[] = {"optic_MRD","11Rnd_45ACP_Mag"}; 
 		
@@ -83,9 +52,9 @@ class loadouts
 		backpackClass = "B_Kitbag_rgr";
 		
 		linkedItems[] = {"ItemMap", "ItemCompass", "ItemWatch", "ItemRadio", "ItemMicroDAGR"}; 
-		uniformItems[] = {"ACE_Banana","FHQ_optic_AC11704",{"HandGrenade", 2},"11Rnd_45ACP_Mag"}; 
+		uniformItems[] = {{"ACE_Banana",1},{"FHQ_optic_AC11704",1},{"HandGrenade", 2},{"11Rnd_45ACP_Mag",1}}; 
 		vestItems[] = {"1Rnd_HE_Grenade_shell",{"hlc_200rnd_556x45_M_SAW", 2}}; 
-		backpackItems[] = {{"ACE_quikclot",8}, {"ACE_elasticBandage",6},{"ACE_packingBandage",2},"ACE_bloodIV_250","ACE_tourniquet",{"ACE_morphine",2},"ACE_epinephrine",{"SmokeShell",2},"SmokeShellBlue"}; 
+		backpackItems[] = {{"ACE_quikclot",8}, {"ACE_elasticBandage",6},{"ACE_packingBandage",2},{"ACE_bloodIV_250",1},{"ACE_tourniquet",1},{"ACE_morphine",2},{"ACE_epinephrine",1},{"SmokeShell",2},{"SmokeShellBlue",1}}; 
 		
 		basicMedUniform[] = {}; 
 		basicMedVest[] = {}; 
@@ -114,9 +83,9 @@ class loadouts
 		backpackClass = "B_Kitbag_rgr";
 		
 		linkedItems[] = {"ItemMap", "ItemCompass", "ItemWatch", "ItemRadio", "ItemMicroDAGR"}; 
-		uniformItems[] = {"ACE_Banana","FHQ_optic_AC11704",{"HandGrenade", 2},"11Rnd_45ACP_Mag"}; 
+		uniformItems[] = {{"ACE_Banana",1},{"FHQ_optic_AC11704",1},{"HandGrenade", 2},{"11Rnd_45ACP_Mag",1}}; 
 		vestItems[] = {"1Rnd_HE_Grenade_shell",{"hlc_30rnd_556x45_M", 10}}; 
-		backpackItems[] = {{"ACE_quikclot",8}, {"ACE_elasticBandage",6},{"ACE_packingBandage",2},"ACE_bloodIV_250","ACE_tourniquet",{"ACE_morphine",2},"ACE_epinephrine",{"SmokeShell",2},"SmokeShellBlue","hlc_200rnd_556x45_M_SAW"}; 
+		backpackItems[] = {{"ACE_quikclot",8}, {"ACE_elasticBandage",6},{"ACE_packingBandage",2},{"ACE_bloodIV_250",1},{"ACE_tourniquet",1},{"ACE_morphine",2},{"ACE_epinephrine",1},{"SmokeShell",2},{"SmokeShellBlue",1},{"hlc_200rnd_556x45_M_SAW",1}}; 
 		
 		basicMedUniform[] = {}; 
 		basicMedVest[] = {}; 
@@ -145,9 +114,9 @@ class loadouts
 		backpackClass = "B_Kitbag_rgr";
 		
 		linkedItems[] = {"ItemMap", "ItemCompass", "ItemWatch", "ItemRadio", "ItemMicroDAGR"}; 
-		uniformItems[] = {"ACE_Banana","FHQ_optic_AC11704","ACE_Clacker",{"HandGrenade", 2},"11Rnd_45ACP_Mag"}; 
+		uniformItems[] = {{"ACE_Banana",1},"FHQ_optic_AC11704","ACE_Clacker",{"HandGrenade", 2},{"11Rnd_45ACP_Mag",1}}; 
 		vestItems[] = {"1Rnd_HE_Grenade_shell",{"hlc_30rnd_556x45_M", 10},"ACE_DefusalKit","DemoCharge_Remote_Mag"}; 
-		backpackItems[] = {{"ACE_quikclot",8}, {"ACE_elasticBandage",6},{"ACE_packingBandage",2},"ACE_bloodIV_250","ACE_tourniquet",{"ACE_morphine",2},"ACE_epinephrine",{"SmokeShell",2},"SmokeShellBlue","hlc_200rnd_556x45_M_SAW"}; 
+		backpackItems[] = {{"ACE_quikclot",8}, {"ACE_elasticBandage",6},{"ACE_packingBandage",2},{"ACE_bloodIV_250",1},{"ACE_tourniquet",1},{"ACE_morphine",2},{"ACE_epinephrine",1},{"SmokeShell",2},{"SmokeShellBlue",1},{"hlc_200rnd_556x45_M_SAW",1}}; 
 		
 		basicMedUniform[] = {}; 
 		basicMedVest[] = {}; 
@@ -176,9 +145,9 @@ class loadouts
 		backpackClass = "B_Carryall_oli";
 		
 		linkedItems[] = {"ItemMap", "ItemCompass", "ItemWatch", "ItemRadio", "ItemMicroDAGR"}; 
-		uniformItems[] = {"ACE_Banana","FHQ_optic_AC11704",{"HandGrenade", 2}}; 
-		vestItems[] = {{"hlc_30rnd_556x45_M", 8}, {"SmokeShell",2},"SmokeShellBlue"}; 
-		backpackItems[] = {{"ACE_quikclot",8}, {"ACE_elasticBandage",6},{"ACE_packingBandage",2},"ACE_bloodIV_250","ACE_tourniquet",{"ACE_morphine",2},"ACE_epinephrine","Titan_AT","hlc_200rnd_556x45_M_SAW",{"1Rnd_HE_Grenade_shell",5},{"30Rnd_556x45_Stanag_Tracer_Yellow",10}}; 
+		uniformItems[] = {{"ACE_Banana",1},{"FHQ_optic_AC11704",1},{"HandGrenade", 2}}; 
+		vestItems[] = {{"hlc_30rnd_556x45_M", 8}, {"SmokeShell",2},{"SmokeShellBlue",1}}; 
+		backpackItems[] = {{"ACE_quikclot",8}, {"ACE_elasticBandage",6},{"ACE_packingBandage",2},{"ACE_bloodIV_250",1},{"ACE_tourniquet",1},{"ACE_morphine",2},{"ACE_epinephrine",1},{"Titan_AT",1},{"hlc_200rnd_556x45_M_SAW",1},{"1Rnd_HE_Grenade_shell",5},{"30Rnd_556x45_Stanag_Tracer_Yellow",10}}; 
 		
 		basicMedUniform[] = {}; 
 		basicMedVest[] = {}; 
@@ -207,9 +176,9 @@ class loadouts
 		backpackClass = "B_Kitbag_rgr";
 		
 		linkedItems[] = {"ItemMap", "ItemCompass", "ItemWatch", "ItemRadio", "ItemMicroDAGR"}; 
-		uniformItems[] = {"ACE_Banana","FHQ_optic_AC11704",{"HandGrenade", 2},"11Rnd_45ACP_Mag"}; 
+		uniformItems[] = {{"ACE_Banana",1},{"FHQ_optic_AC11704",1},{"HandGrenade", 2},{"11Rnd_45ACP_Mag",1}}; 
 		vestItems[] = {"1Rnd_HE_Grenade_shell",{"hlc_30rnd_556x45_M", 10},{"1Rnd_HE_Grenade_shell",12}}; 
-		backpackItems[] = {{"ACE_quikclot",8}, {"ACE_elasticBandage",6},{"ACE_packingBandage",2},"ACE_bloodIV_250","ACE_tourniquet",{"ACE_morphine",2},"ACE_epinephrine",{"SmokeShell",2},"SmokeShellBlue","hlc_200rnd_556x45_M_SAW",{"1Rnd_HE_Grenade_shell",18}}; 
+		backpackItems[] = {{"ACE_quikclot",8}, {"ACE_elasticBandage",6},{"ACE_packingBandage",2},{"ACE_bloodIV_250",1},{"ACE_tourniquet",1},{"ACE_morphine",2},{"ACE_epinephrine",1},{"SmokeShell",2},{"SmokeShellBlue",1},{"hlc_200rnd_556x45_M_SAW",1},{"1Rnd_HE_Grenade_shell",18}}; 
 		
 		basicMedUniform[] = {}; 
 		basicMedVest[] = {}; 
@@ -238,9 +207,9 @@ class loadouts
 		backpackClass = "B_Kitbag_rgr";
 		
 		linkedItems[] = {"ItemMap", "ItemCompass", "ItemWatch", "ItemRadio", "ItemAndroid"}; 
-		uniformItems[] = {"ACE_Banana","FHQ_optic_AC11704",{"HandGrenade", 2},"11Rnd_45ACP_Mag"}; 
+		uniformItems[] = {{"ACE_Banana",1},{"FHQ_optic_AC11704",1},{"HandGrenade", 2},{"11Rnd_45ACP_Mag",1}}; 
 		vestItems[] = {{"1Rnd_HE_Grenade_shell", 2},{"hlc_30rnd_556x45_M", 9},{"1Rnd_Smoke_Grenade_shell", 2},{"1Rnd_SmokeRed_Grenade_shell", 2}}; 
-		backpackItems[] = {{"ACE_quikclot",8}, {"ACE_elasticBandage",6},{"ACE_packingBandage",2},"ACE_bloodIV_250","ACE_tourniquet",{"ACE_morphine",2},"ACE_epinephrine",{"SmokeShell",2},"SmokeShellBlue","hlc_200rnd_556x45_M_SAW"}; 
+		backpackItems[] = {{"ACE_quikclot",8}, {"ACE_elasticBandage",6},{"ACE_packingBandage",2},{"ACE_bloodIV_250",1},{"ACE_tourniquet",1},{"ACE_morphine",2},{"ACE_epinephrine",1},{"SmokeShell",2},{"SmokeShellBlue",1},{"hlc_200rnd_556x45_M_SAW",1}}; 
 		
 		basicMedUniform[] = {}; 
 		basicMedVest[] = {}; 
@@ -269,9 +238,9 @@ class loadouts
 		backpackClass = "B_Kitbag_rgr";
 		
 		linkedItems[] = {"ItemMap", "ItemCompass", "ItemWatch", "ItemRadio", "ItemMicroDAGR"}; 
-		uniformItems[] = {"ACE_Banana","FHQ_optic_AC11704",{"HandGrenade", 2},"11Rnd_45ACP_Mag"}; 
+		uniformItems[] = {{"ACE_Banana",1},{"FHQ_optic_AC11704",1},{"HandGrenade", 2},{"11Rnd_45ACP_Mag",1}}; 
 		vestItems[] = {{"hlc_30rnd_556x45_M", 6}}; 
-		backpackItems[] = {{"ACE_quikclot",8}, {"ACE_elasticBandage",6},{"ACE_packingBandage",2},"ACE_bloodIV_250","ACE_tourniquet",{"ACE_morphine",2},"ACE_epinephrine",{"SmokeShell",2},"SmokeShellBlue"}; 
+		backpackItems[] = {{"ACE_quikclot",8}, {"ACE_elasticBandage",6},{"ACE_packingBandage",2},{"ACE_bloodIV_250",1},{"ACE_tourniquet",1},{"ACE_morphine",2},{"ACE_epinephrine",1},{"SmokeShell",2},{"SmokeShellBlue",1}}; 
 		
 		basicMedUniform[] = {}; 
 		basicMedVest[] = {}; 
@@ -300,9 +269,9 @@ class loadouts
 		backpackClass = "B_Kitbag_rgr";
 		
 		linkedItems[] = {"ItemMap", "ItemCompass", "ItemWatch", "ItemRadio", "ItemMicroDAGR"}; 
-		uniformItems[] = {"ACE_Banana","FHQ_optic_AC11704",{"HandGrenade", 2},"11Rnd_45ACP_Mag"}; 
+		uniformItems[] = {{"ACE_Banana",1},{"FHQ_optic_AC11704",1},{"HandGrenade", 2},{"11Rnd_45ACP_Mag",1}}; 
 		vestItems[] = {"1Rnd_HE_Grenade_shell",{"hlc_30rnd_556x45_M", 10}}; 
-		backpackItems[] = {{"ACE_quikclot",8}, {"ACE_elasticBandage",6},{"ACE_packingBandage",2},"ACE_bloodIV_250","ACE_tourniquet",{"ACE_morphine",2},"ACE_epinephrine",{"SmokeShell",2},"SmokeShellBlue","hlc_200rnd_556x45_M_SAW"}; 
+		backpackItems[] = {{"ACE_quikclot",8}, {"ACE_elasticBandage",6},{"ACE_packingBandage",2},{"ACE_bloodIV_250",1},{"ACE_tourniquet",1},{"ACE_morphine",2},{"ACE_epinephrine",1},{"SmokeShell",2},{"SmokeShellBlue",1},{"hlc_200rnd_556x45_M_SAW",1}}; 
 		
 		basicMedUniform[] = {}; 
 		basicMedVest[] = {}; 
@@ -331,9 +300,9 @@ class loadouts
 		backpackClass = "IP_B_Kitbag_SnowTiger";
 		
 		linkedItems[] = {"ItemMap", "ItemCompass", "ItemWatch", "ItemRadio", "ItemMicroDAGR"}; 
-		uniformItems[] = {"FHQ_optic_AC11704",{"HandGrenade", 2},"11Rnd_45ACP_Mag","ACE_bloodIV_250"}; 
+		uniformItems[] = {{"ACE_Banana",1},{"FHQ_optic_AC11704",1},{"HandGrenade", 2},{"11Rnd_45ACP_Mag",1},{"ACE_bloodIV_250",1}}; 
 		vestItems[] = {{"ACE_quikclot", 20},{"ACE_elasticBandage", 20},{"ACE_epinephrine", 5},{"ACE_tourniquet", 5},{"ACE_morphine", 10},{"ACE_bloodIV_250", 5},{"SmokeShell", 4}}; 
-		backpackItems[] = {{"ACE_quikclot", 40},{"ACE_elasticBandage", 40},{"ACE_epinephrine", 10},{"ACE_tourniquet", 10},{"ACE_morphine", 20},{"ACE_bloodIV_500", 4},{"ACE_bloodIV_1000", 2},{"ACE_personalAidKit", 4},{"SmokeShell", 4},{"SmokeShell",2},"SmokeShellBlue","ACE_surgicalKit"}; 
+		backpackItems[] = {{"ACE_quikclot", 40},{"ACE_elasticBandage", 40},{"ACE_epinephrine", 10},{"ACE_tourniquet", 10},{"ACE_morphine", 20},{"ACE_bloodIV_500", 4},{"ACE_bloodIV_1000", 2},{"ACE_personalAidKit", 4},{"SmokeShell", 4},{"SmokeShell",2},{"SmokeShellBlue",1},{"ACE_surgicalKit",1}}; 
 		
 		basicMedUniform[] = {}; 
 		basicMedVest[] = {}; 
