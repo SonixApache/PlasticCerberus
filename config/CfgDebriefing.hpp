@@ -9,18 +9,18 @@ class BESTEND //need to add backgrounds/pictures
 	description = "Far beyond expectations. You deserve a commendation.";
 };
 
-class COLONELKILLED
+class GENERALKILLED
 {
 	title = "MISSION COMPLETE";
-	subtitle = "COLONEL KILLED";
-	description = "You were not able to retrieve the tank, but killing the Colonel will make stabilizing the area easier.";
+	subtitle = "GENERAL KILLED";
+	description = "You were not able to retrieve the tank, but killing the General will make stabilizing the area easier.";
 };
 
 class TANKRETRIEVED
 {
 	title = "MISSION COMPLETE";
 	subtitle = "TANK RETRIEVED";
-	description = "The Colonel is still alive, but the tank you retrieved will definitely change that soon.";
+	description = "The General is still alive, but the tank you retrieved will definitely change that soon.";
 };
 
 	class BASEREACHED

@@ -1,0 +1,385 @@
+/*%FSM<COMPILE "C:\Program Files (x86)\Steam\steamapps\common\Arma 3 Tools\FSMEditor\scriptedFSM.cfg, plascerb">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"init",0,250,-17.363007,-221.679535,62.753265,-180.981949,0.000000,"init"};
+item1[] = {"ifServer",4,218,-148.952835,-219.533905,-58.952820,-169.533905,0.000000,"ifServer"};
+item2[] = {"not__a_server_",1,250,-266.104004,-220.115280,-176.103973,-170.115295,0.000000,"not " \n "a server" \n ""};
+item3[] = {"count_lving_players",4,218,-42.522003,184.838211,67.571655,287.955383,0.000000,"count lving" \n "players" \n "in airfield"};
+item4[] = {"true",8,218,7.292877,-160.198578,44.458923,-136.949936,0.000000,"true"};
+item5[] = {"big_fuckin_loop",2,250,-26.904755,52.878433,63.095261,102.878433,0.000000,"big" \n "fuckin" \n "loop"};
+item6[] = {"Timeout",4,218,157.344574,183.494400,247.344574,233.494415,0.000000,"Timeout"};
+item7[] = {"Show_correct_ending",1,250,-55.748322,648.133667,34.251709,698.133545,0.000000,"Show" \n "correct" \n "ending" \n ""};
+item8[] = {"tank_retrieved_",4,218,-321.192688,-28.519669,-169.014801,38.008682,0.000000,"tank retrieved" \n "& not ded?"};
+item9[] = {"Is_general_dead",4,218,184.793900,66.683319,336.971802,133.211670,0.000000,"Is general dead?"};
+item10[] = {"true",8,218,215.957947,-133.241852,305.957947,-83.241837,0.000000,"true"};
+item11[] = {"true",8,218,-147.145508,-59.218613,-57.145508,-9.218597,0.000000,"true"};
+item12[] = {"Set__correct__en",2,4346,-37.279602,312.455963,52.720398,362.455963,0.000000,"Set " \n "correct " \n "ending"};
+item13[] = {"set_general_dead",2,250,228.424988,-36.622025,318.424988,13.377991,0.000000,"set" \n "general" \n "dead"};
+item14[] = {"set__tank__retri",2,250,-321.684692,-103.632599,-231.684631,-53.632584,0.000000,"set" \n " tank" \n " retrieved"};
+item15[] = {"variables",2,250,-20.916504,-119.216370,69.083511,-69.216370,0.000000,"variables"};
+item16[] = {"true",8,218,-5.332672,-45.193115,53.499634,-17.010483,0.000000,"true"};
+item17[] = {"tank_ded_",4,218,-285.184296,148.046509,-195.184280,198.046509,0.000000,"tank ded?"};
+item18[] = {"kill_task_rip_ta",2,250,-286.549469,76.294891,-196.549438,126.294891,0.000000,"kill task" \n "rip tank"};
+item19[] = {"show_loser_endin",1,250,-316.351654,271.937866,-226.351685,321.937805,0.000000,"show" \n "loser" \n "ending"};
+item20[] = {"everyone_is_dead",4,218,-165.188446,174.538879,-61.162994,248.693848,0.000000,"everyone" \n "is" \n "dead"};
+item21[] = {"true",8,218,-161.292480,66.231140,-105.576927,102.984833,0.000000,"true"};
+item22[] = {"general_dead___tank",4,218,-261.029083,425.438965,-132.069489,522.969604,0.000000,"general dead" \n "&" \n "tank retrieved"};
+item23[] = {"general_dead___",4,218,-121.553741,424.659698,7.405853,522.190186,0.000000,"general dead" \n "&" \n "!tank retrieved"};
+item24[] = {"__general_dead_",4,218,16.363342,424.659729,145.322937,522.190308,0.000000,"!general dead" \n "&" \n "tank retrieved"};
+item25[] = {"__general_dead__1",4,218,144.150879,423.101379,273.110474,520.631958,0.000000,"!general dead" \n "&" \n "!tank retrieved"};
+link0[] = {0,1};
+link1[] = {0,4};
+link2[] = {1,2};
+link3[] = {3,12};
+link4[] = {4,15};
+link5[] = {5,3};
+link6[] = {5,6};
+link7[] = {5,8};
+link8[] = {5,9};
+link9[] = {5,17};
+link10[] = {5,20};
+link11[] = {6,5};
+link12[] = {8,14};
+link13[] = {9,13};
+link14[] = {10,5};
+link15[] = {11,5};
+link16[] = {12,22};
+link17[] = {12,23};
+link18[] = {12,24};
+link19[] = {12,25};
+link20[] = {13,10};
+link21[] = {14,11};
+link22[] = {15,16};
+link23[] = {16,5};
+link24[] = {17,18};
+link25[] = {18,21};
+link26[] = {20,19};
+link27[] = {21,5};
+link28[] = {22,7};
+link29[] = {23,7};
+link30[] = {24,7};
+link31[] = {25,7};
+globals[] = {0.000000,0,0,0,0,640,480,1,37,6316128,1,-488.553192,350.636719,755.816406,67.010529,1077,884,1};
+window[] = {2,-1,-1,-1,-1,1008,130,1570,130,3,1095};
+*//*%FSM</HEAD>*/
+class FSM
+{
+        fsmName = "plascerb";
+        class States
+        {
+                /*%FSM<STATE "init">*/
+                class init
+                {
+                        name = "init";
+                        itemno = 0;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "true">*/
+                                class true
+                                {
+                                        itemno = 4;
+                                        priority = 0.000000;
+                                        to="variables";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "ifServer">*/
+                                class ifServer
+                                {
+                                        itemno = 1;
+                                        priority = 0.000000;
+                                        to="not__a_server_";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"ifServer"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "not__a_server_">*/
+                class not__a_server_
+                {
+                        name = "not__a_server_";
+                        itemno = 2;
+                        init = /*%FSM<STATEINIT""">*/"exitWith {};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "big_fuckin_loop">*/
+                class big_fuckin_loop
+                {
+                        name = "big_fuckin_loop";
+                        itemno = 5;
+                        init = /*%FSM<STATEINIT""">*/"" \n
+                         "systemChat ""Condition Loop"";" \n
+                         "_timeout = time + 30;" \n
+                         "true;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Timeout">*/
+                                class Timeout
+                                {
+                                        itemno = 6;
+                                        priority = 0.000000;
+                                        to="big_fuckin_loop";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"time > _timeout;"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "tank_retrieved_">*/
+                                class tank_retrieved_
+                                {
+                                        itemno = 8;
+                                        priority = 0.000000;
+                                        to="set__tank__retri";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"time > _timeOut && !_tankexploded && OBJtank in list ENDTRIGZERO;"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Is_general_dead">*/
+                                class Is_general_dead
+                                {
+                                        itemno = 9;
+                                        priority = 0.000000;
+                                        to="set_general_dead";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"time > _timeOut && !alive GeneEricman"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "tank_ded_">*/
+                                class tank_ded_
+                                {
+                                        itemno = 17;
+                                        priority = 0.000000;
+                                        to="kill_task_rip_ta";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!alive OBJTank;"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "everyone_is_dead">*/
+                                class everyone_is_dead
+                                {
+                                        itemno = 20;
+                                        priority = 0.000000;
+                                        to="show_loser_endin";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"{ alive _x } count _playercount <= 0"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "count_lving_players">*/
+                                class count_lving_players
+                                {
+                                        itemno = 3;
+                                        priority = 0.000000;
+                                        to="Set__correct__en";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"time > _timeOut && {alive _x} count (list ENDTRIGZERO) > count (_playerArray) / 2"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Show_correct_ending">*/
+                class Show_correct_ending
+                {
+                        name = "Show_correct_ending";
+                        itemno = 7;
+                        init = /*%FSM<STATEINIT""">*/"player allowdamage false;" \n
+                         "_ending call BIS_fnc_endMission;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Set__correct__en">*/
+                class Set__correct__en
+                {
+                        name = "Set__correct__en";
+                        itemno = 12;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "general_dead___">*/
+                                class general_dead___
+                                {
+                                        itemno = 23;
+                                        priority = 0.000000;
+                                        to="Show_correct_ending";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_generaldead && !_tankretrieved"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/"_ending = ""GENERALKILLED"""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "__general_dead_">*/
+                                class __general_dead_
+                                {
+                                        itemno = 24;
+                                        priority = 0.000000;
+                                        to="Show_correct_ending";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!_generaldead && _tankretrieved"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/"_ending = ""TANKRETRIEVED"""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "__general_dead__1">*/
+                                class __general_dead__1
+                                {
+                                        itemno = 25;
+                                        priority = 0.000000;
+                                        to="Show_correct_ending";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!_generaldead && _!tankretrieved"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/"_ending = ""BASEREACHED"""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "general_dead___tank">*/
+                                class general_dead___tank
+                                {
+                                        itemno = 22;
+                                        priority = 0.000000;
+                                        to="Show_correct_ending";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_generaldead && _tankretrieved"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/"_ending = ""BESTEND"""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "set_general_dead">*/
+                class set_general_dead
+                {
+                        name = "set_general_dead";
+                        itemno = 13;
+                        init = /*%FSM<STATEINIT""">*/"_generaldead = True"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "true">*/
+                                class true
+                                {
+                                        itemno = 10;
+                                        priority = 0.000000;
+                                        to="big_fuckin_loop";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "set__tank__retri">*/
+                class set__tank__retri
+                {
+                        name = "set__tank__retri";
+                        itemno = 14;
+                        init = /*%FSM<STATEINIT""">*/"[""VYBORTASK"", ""Succeeded"", true] call BIS_fnc_taskSetState;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "true">*/
+                                class true
+                                {
+                                        itemno = 11;
+                                        priority = 0.000000;
+                                        to="big_fuckin_loop";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "variables">*/
+                class variables
+                {
+                        name = "variables";
+                        itemno = 15;
+                        init = /*%FSM<STATEINIT""">*/"_playerCount = count (playableUnits+switchableUnits);" \n
+                         "_endUnits = list ENDTRIGZERO;" \n
+                         "_tankexploded = False;" \n
+                         "_tankretrieved = False;" \n
+                         "_generaldead = False;" \n
+                         "_ending = ""loser"";"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "true">*/
+                                class true
+                                {
+                                        itemno = 16;
+                                        priority = 0.000000;
+                                        to="big_fuckin_loop";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "kill_task_rip_ta">*/
+                class kill_task_rip_ta
+                {
+                        name = "kill_task_rip_ta";
+                        itemno = 18;
+                        init = /*%FSM<STATEINIT""">*/"[""VYBORTASK"", ""Cancelled"", true] call BIS_fnc_taskSetState;" \n
+                         "_tankexploded = True;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "true">*/
+                                class true
+                                {
+                                        itemno = 21;
+                                        priority = 0.000000;
+                                        to="big_fuckin_loop";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "show_loser_endin">*/
+                class show_loser_endin
+                {
+                        name = "show_loser_endin";
+                        itemno = 19;
+                        init = /*%FSM<STATEINIT""">*/"_ending call BIS_fnc_endMission;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+        };
+        initState="init";
+        finalStates[] =
+        {
+                "not__a_server_",
+                "Show_correct_ending",
+                "show_loser_endin",
+        };
+};
+/*%FSM</COMPILE>*/
