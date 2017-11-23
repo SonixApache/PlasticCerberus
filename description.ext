@@ -1,7 +1,7 @@
 //-------------------- Mission Information
 
 author = "SonixApache";					// Author name visible on loading screen
-briefingName = "Plastic Cerberus 0.9a";				// Name visible in mission select screen
+briefingName = "Plastic Cerberus 0.9b";				// Name visible in mission select screen
 overviewText = "A Humvee-centric infantry combat operation";				// Description visible in mission select screen
 //overviewPicture = "";			// Image visible in mission select screen. Leave commented, still doesn't work properly.
 onLoadName = "PLASTIC CERBERUS";				// Name visible on loading screen

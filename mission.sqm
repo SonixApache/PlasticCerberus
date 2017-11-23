@@ -12,10 +12,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={3242.9395,348.75198,8019.5962};
-		dir[]={-0.86314052,-0.18796667,-0.46887252};
-		up[]={-0.16522321,0.98217249,-0.089751959};
-		aside[]={-0.47737539,-2.8847717e-007,0.87879652};
+		pos[]={8348.3584,302.71338,5977.813};
+		dir[]={0.1074264,-0.71460336,0.69124329};
+		up[]={0.10973914,0.69952476,0.70613271};
+		aside[]={0.98814636,1.0168878e-007,-0.15356658};
 	};
 };
 binarizationWanted=0;
@@ -377,7 +377,8 @@ class Mission
 {
 	class Intel
 	{
-		resistanceEast=1;
+		briefingName="Plastic Cerberus 0.9b";
+		resistanceWest=0;
 		timeOfChanges=1800.0002;
 		startWeather=0.25;
 		startWind=0.1;
@@ -671,7 +672,7 @@ class Mission
 			{
 				skill=0.60000002;
 				lock="UNLOCKED";
-				init="call{if (isServer) then {     ClearWeaponCargoGlobal this;     ClearMagazineCargoGlobal this;     clearItemCargoGlobal this;  this addWeaponCargoGlobal [""CUP_arifle_Mk16_STD_FG_black"",3];   this addMagazineCargoGlobal [""hlc_30rnd_556x45_M"",50];     this addMagazineCargoGlobal [""hlc_200rnd_556x45_M_SAW"",25];     this addMagazineCargoGlobal [""1Rnd_HE_Grenade_shell"",5];     this addMagazineCargoGlobal [""SmokeShell"", 5];     this addMagazineCargoGlobal [""1Rnd_Smoke_Grenade_shell"",5];     this addMagazineCargoGlobal [""1Rnd_SmokeRed_Grenade_shell"",5];     this addMagazineCargoGlobal [""Titan_AT"",5]; this addMagazineCargoGlobal [""Titan_AT"",2]; this addWeaponCargoGlobal[""CUP_launch_M136"",3];  this addMagazineCargoGlobal [""CUP_M136_M"",3];  this addItemCargoGlobal [""ACE_quikclot"",20]; this addItemCargoGlobal [""ACE_elasticBandage"",20]; this addItemCargoGlobal [""ACE_packingBandage"",10]; this addItemCargoGlobal [""ACE_Morphine"",20]; this addItemCargoGlobal [""ACE_atropine"",20]; this addItemCargoGlobal [""ACE_epinephrine"",20]; this addItemCargoGlobal [""ACE_salineIV"",20];     this addItemCargoGlobal [""ACE_personalAidKit"",20]; this addItemCargoGlobal [""Toolkit"",1]; };}";
+				init="call{if (isServer) then {     ClearWeaponCargoGlobal this;     ClearMagazineCargoGlobal this;     clearItemCargoGlobal this;  this addWeaponCargoGlobal [""CUP_arifle_Mk16_STD_FG_black"",3];   this addMagazineCargoGlobal [""hlc_30rnd_556x45_M"",50];     this addMagazineCargoGlobal [""hlc_200rnd_556x45_M_SAW"",25];     this addMagazineCargoGlobal [""1Rnd_HE_Grenade_shell"",5];     this addMagazineCargoGlobal [""SmokeShell"", 5];     this addMagazineCargoGlobal [""1Rnd_Smoke_Grenade_shell"",5];     this addMagazineCargoGlobal [""1Rnd_SmokeRed_Grenade_shell"",5];     this addMagazineCargoGlobal [""CUP_MAAWS_HEAT_M"",5]; this addMagazineCargoGlobal [""CUP_MAAWS_HEAT_M"",2]; this addWeaponCargoGlobal[""CUP_launch_M136"",3];  this addMagazineCargoGlobal [""CUP_M136_M"",3];  this addItemCargoGlobal [""ACE_quikclot"",20]; this addItemCargoGlobal [""ACE_elasticBandage"",20]; this addItemCargoGlobal [""ACE_packingBandage"",10]; this addItemCargoGlobal [""ACE_Morphine"",20]; this addItemCargoGlobal [""ACE_atropine"",20]; this addItemCargoGlobal [""ACE_epinephrine"",20]; this addItemCargoGlobal [""ACE_salineIV"",20];     this addItemCargoGlobal [""ACE_personalAidKit"",20]; this addItemCargoGlobal [""Toolkit"",1]; };}";
 				name="HMMV2";
 				description="Alpha BLUE";
 			};
@@ -715,7 +716,7 @@ class Mission
 			{
 				skill=0.60000002;
 				lock="UNLOCKED";
-				init="call{if (isServer) then {     ClearWeaponCargoGlobal this;     ClearMagazineCargoGlobal this;     clearItemCargoGlobal this;  this addWeaponCargoGlobal [""CUP_arifle_Mk16_STD_FG_black"",3];   this addMagazineCargoGlobal [""hlc_30rnd_556x45_M"",50];     this addMagazineCargoGlobal [""hlc_200rnd_556x45_M_SAW"",25];     this addMagazineCargoGlobal [""1Rnd_HE_Grenade_shell"",5];     this addMagazineCargoGlobal [""SmokeShell"", 5];     this addMagazineCargoGlobal [""1Rnd_Smoke_Grenade_shell"",5];     this addMagazineCargoGlobal [""1Rnd_SmokeRed_Grenade_shell"",5];     this addMagazineCargoGlobal [""Titan_AT"",5]; this addMagazineCargoGlobal [""Titan_AT"",2]; this addWeaponCargoGlobal [""CUP_launch_M136"",3];  this addMagazineCargoGlobal [""CUP_M136_M"",3];  this addItemCargoGlobal [""ACE_quikclot"",20]; this addItemCargoGlobal [""ACE_elasticBandage"",20]; this addItemCargoGlobal [""ACE_packingBandage"",10]; this addItemCargoGlobal [""ACE_Morphine"",20]; this addItemCargoGlobal [""ACE_atropine"",20]; this addItemCargoGlobal [""ACE_epinephrine"",20]; this addItemCargoGlobal [""ACE_salineIV"",20];     this addItemCargoGlobal [""ACE_personalAidKit"",20]; this addItemCargoGlobal [""Toolkit"",1]; };}";
+				init="call{if (isServer) then {     ClearWeaponCargoGlobal this;     ClearMagazineCargoGlobal this;     clearItemCargoGlobal this;  this addWeaponCargoGlobal [""CUP_arifle_Mk16_STD_FG_black"",3];   this addMagazineCargoGlobal [""hlc_30rnd_556x45_M"",50];     this addMagazineCargoGlobal [""hlc_200rnd_556x45_M_SAW"",25];     this addMagazineCargoGlobal [""1Rnd_HE_Grenade_shell"",5];     this addMagazineCargoGlobal [""SmokeShell"", 5];     this addMagazineCargoGlobal [""1Rnd_Smoke_Grenade_shell"",5];     this addMagazineCargoGlobal [""1Rnd_SmokeRed_Grenade_shell"",5];     this addMagazineCargoGlobal [""CUP_MAAWS_HEAT_M"",5]; this addMagazineCargoGlobal [""CUP_MAAWS_HEAT_M"",2]; this addWeaponCargoGlobal [""CUP_launch_M136"",3];  this addMagazineCargoGlobal [""CUP_M136_M"",3];  this addItemCargoGlobal [""ACE_quikclot"",20]; this addItemCargoGlobal [""ACE_elasticBandage"",20]; this addItemCargoGlobal [""ACE_packingBandage"",10]; this addItemCargoGlobal [""ACE_Morphine"",20]; this addItemCargoGlobal [""ACE_atropine"",20]; this addItemCargoGlobal [""ACE_epinephrine"",20]; this addItemCargoGlobal [""ACE_salineIV"",20];     this addItemCargoGlobal [""ACE_personalAidKit"",20]; this addItemCargoGlobal [""Toolkit"",1]; };}";
 				name="HMMV3";
 				description="Bravo RED";
 			};
@@ -759,7 +760,7 @@ class Mission
 			{
 				skill=0.60000002;
 				lock="UNLOCKED";
-				init="call{if (isServer) then {     ClearWeaponCargoGlobal this;     ClearMagazineCargoGlobal this;     clearItemCargoGlobal this;   this addWeaponCargoGlobal [""CUP_arifle_Mk16_STD_FG_black"",3]; this addMagazineCargoGlobal [""hlc_30rnd_556x45_M"",50];     this addMagazineCargoGlobal [""hlc_200rnd_556x45_M_SAW"",25];     this addMagazineCargoGlobal [""1Rnd_HE_Grenade_shell"",10];     this addMagazineCargoGlobal [""SmokeShell"", 5];     this addMagazineCargoGlobal [""1Rnd_Smoke_Grenade_shell"",5];     this addMagazineCargoGlobal [""1Rnd_SmokeRed_Grenade_shell"",5];     this addMagazineCargoGlobal [""Titan_AT"",5]; this addMagazineCargoGlobal [""Titan_AT"",2];  this addWeaponCargoGlobal[""CUP_launch_M136"",3];  this addMagazineCargoGlobal [""CUP_M136_M"",3]; this addItemCargoGlobal [""ACE_quikclot"",20]; this addItemCargoGlobal [""ACE_elasticBandage"",20]; this addItemCargoGlobal [""ACE_packingBandage"",10]; this addItemCargoGlobal [""ACE_Morphine"",20]; this addItemCargoGlobal [""ACE_atropine"",20]; this addItemCargoGlobal [""ACE_epinephrine"",20]; this addItemCargoGlobal [""ACE_salineIV"",20];     this addItemCargoGlobal [""ACE_personalAidKit"",20]; this addItemCargoGlobal [""Toolkit"",1]; };}";
+				init="call{if (isServer) then {     ClearWeaponCargoGlobal this;     ClearMagazineCargoGlobal this;     clearItemCargoGlobal this;   this addWeaponCargoGlobal [""CUP_arifle_Mk16_STD_FG_black"",3]; this addMagazineCargoGlobal [""hlc_30rnd_556x45_M"",50];     this addMagazineCargoGlobal [""hlc_200rnd_556x45_M_SAW"",25];     this addMagazineCargoGlobal [""1Rnd_HE_Grenade_shell"",10];     this addMagazineCargoGlobal [""SmokeShell"", 5];     this addMagazineCargoGlobal [""1Rnd_Smoke_Grenade_shell"",5];     this addMagazineCargoGlobal [""1Rnd_SmokeRed_Grenade_shell"",5];     this addMagazineCargoGlobal [""CUP_MAAWS_HEAT_M"",5]; this addMagazineCargoGlobal [""CUP_MAAWS_HEAT_M"",2];  this addWeaponCargoGlobal[""CUP_launch_M136"",3];  this addMagazineCargoGlobal [""CUP_M136_M"",3]; this addItemCargoGlobal [""ACE_quikclot"",20]; this addItemCargoGlobal [""ACE_elasticBandage"",20]; this addItemCargoGlobal [""ACE_packingBandage"",10]; this addItemCargoGlobal [""ACE_Morphine"",20]; this addItemCargoGlobal [""ACE_atropine"",20]; this addItemCargoGlobal [""ACE_epinephrine"",20]; this addItemCargoGlobal [""ACE_salineIV"",20];     this addItemCargoGlobal [""ACE_personalAidKit"",20]; this addItemCargoGlobal [""Toolkit"",1]; };}";
 				name="HMMV1";
 				description="Alpha RED";
 			};
@@ -803,7 +804,7 @@ class Mission
 			{
 				skill=0.60000002;
 				lock="UNLOCKED";
-				init="if (isServer) then {     ClearWeaponCargoGlobal this;     ClearMagazineCargoGlobal this;     clearItemCargoGlobal this;  this addWeaponCargoGlobal [""CUP_arifle_Mk16_STD_FG_black"",3];   this addMagazineCargoGlobal [""hlc_30rnd_556x45_M"",50];     this addMagazineCargoGlobal [""hlc_200rnd_556x45_M_SAW"",25];     this addMagazineCargoGlobal [""1Rnd_HE_Grenade_shell"",5];     this addMagazineCargoGlobal [""SmokeShell"", 5];     this addMagazineCargoGlobal [""1Rnd_Smoke_Grenade_shell"",5];     this addMagazineCargoGlobal [""1Rnd_SmokeRed_Grenade_shell"",5];     this addMagazineCargoGlobal [""Titan_AT"",5]; this addMagazineCargoGlobal [""Titan_AT"",2]; this addWeaponCargoGlobal[""CUP_launch_M136"",2]; this addMagazineCargoGlobal [""CUP_M136_M"",3];  this addItemCargoGlobal [""ACE_quikclot"",20]; this addItemCargoGlobal [""ACE_elasticBandage"",20]; this addItemCargoGlobal [""ACE_packingBandage"",10]; this addItemCargoGlobal [""ACE_Morphine"",20]; this addItemCargoGlobal [""ACE_atropine"",20]; this addItemCargoGlobal [""ACE_epinephrine"",20]; this addItemCargoGlobal [""ACE_salineIV"",20];     this addItemCargoGlobal [""ACE_personalAidKit"",20]; this addItemCargoGlobal [""Toolkit"",1];   };";
+				init="if (isServer) then {     ClearWeaponCargoGlobal this;     ClearMagazineCargoGlobal this;     clearItemCargoGlobal this;  this addWeaponCargoGlobal [""CUP_arifle_Mk16_STD_FG_black"",3];   this addMagazineCargoGlobal [""hlc_30rnd_556x45_M"",50];     this addMagazineCargoGlobal [""hlc_200rnd_556x45_M_SAW"",25];     this addMagazineCargoGlobal [""1Rnd_HE_Grenade_shell"",5];     this addMagazineCargoGlobal [""SmokeShell"", 5];     this addMagazineCargoGlobal [""1Rnd_Smoke_Grenade_shell"",5];     this addMagazineCargoGlobal [""1Rnd_SmokeRed_Grenade_shell"",5];     this addMagazineCargoGlobal [""CUP_MAAWS_HEAT_M"",5]; this addMagazineCargoGlobal [""CUP_MAAWS_HEAT_M"",2]; this addWeaponCargoGlobal[""CUP_launch_M136"",2]; this addMagazineCargoGlobal [""CUP_M136_M"",3];  this addItemCargoGlobal [""ACE_quikclot"",20]; this addItemCargoGlobal [""ACE_elasticBandage"",20]; this addItemCargoGlobal [""ACE_packingBandage"",10]; this addItemCargoGlobal [""ACE_Morphine"",20]; this addItemCargoGlobal [""ACE_atropine"",20]; this addItemCargoGlobal [""ACE_epinephrine"",20]; this addItemCargoGlobal [""ACE_salineIV"",20];     this addItemCargoGlobal [""ACE_personalAidKit"",20]; this addItemCargoGlobal [""Toolkit"",1];   };";
 				name="HMMV4";
 				description="Bravo BLUE";
 			};
@@ -6892,7 +6893,7 @@ class Mission
 			{
 				skill=0.60000002;
 				lock="UNLOCKED";
-				init="call{if (isServer) then {  [HMMV5,	nil,[""hide_frontTop"", 0]] call BIS_fnc_initVehicle;   ClearWeaponCargoGlobal this;     ClearMagazineCargoGlobal this;     clearItemCargoGlobal this;  this addWeaponCargoGlobal [""CUP_arifle_Mk16_STD_FG_black"",3];   this addMagazineCargoGlobal [""hlc_30rnd_556x45_M"",50];     this addMagazineCargoGlobal [""hlc_200rnd_556x45_M_SAW"",25];     this addMagazineCargoGlobal [""1Rnd_HE_Grenade_shell"",5];     this addMagazineCargoGlobal [""SmokeShell"", 5];     this addMagazineCargoGlobal [""1Rnd_Smoke_Grenade_shell"",5];     this addMagazineCargoGlobal [""1Rnd_SmokeRed_Grenade_shell"",5];     this addMagazineCargoGlobal [""Titan_AT"",5]; this addMagazineCargoGlobal [""Titan_AT"",2]; this addWeaponCargoGlobal [""CUP_launch_M136"",2]; this addMagazineCargoGlobal [""CUP_M136_M"",3];  this addItemCargoGlobal [""ACE_quikclot"",20]; this addItemCargoGlobal [""ACE_elasticBandage"",20]; this addItemCargoGlobal [""ACE_packingBandage"",10]; this addItemCargoGlobal [""ACE_Morphine"",20]; this addItemCargoGlobal [""ACE_atropine"",20]; this addItemCargoGlobal [""ACE_epinephrine"",20]; this addItemCargoGlobal [""ACE_salineIV"",20];     this addItemCargoGlobal [""ACE_personalAidKit"",20]; this addItemCargoGlobal [""Toolkit"",1];    };}";
+				init="call{if (isServer) then {  [HMMV5,	nil,[""hide_frontTop"", 0]] call BIS_fnc_initVehicle;   ClearWeaponCargoGlobal this;     ClearMagazineCargoGlobal this;     clearItemCargoGlobal this;  this addWeaponCargoGlobal [""CUP_arifle_Mk16_STD_FG_black"",3];   this addMagazineCargoGlobal [""hlc_30rnd_556x45_M"",50];     this addMagazineCargoGlobal [""hlc_200rnd_556x45_M_SAW"",25];     this addMagazineCargoGlobal [""1Rnd_HE_Grenade_shell"",5];     this addMagazineCargoGlobal [""SmokeShell"", 5];     this addMagazineCargoGlobal [""1Rnd_Smoke_Grenade_shell"",5];     this addMagazineCargoGlobal [""1Rnd_SmokeRed_Grenade_shell"",5];     this addMagazineCargoGlobal [""CUP_MAAWS_HEAT_M"",5]; this addMagazineCargoGlobal [""CUP_MAAWS_HEAT_M"",2]; this addWeaponCargoGlobal [""CUP_launch_M136"",2]; this addMagazineCargoGlobal [""CUP_M136_M"",3];  this addItemCargoGlobal [""ACE_quikclot"",20]; this addItemCargoGlobal [""ACE_elasticBandage"",20]; this addItemCargoGlobal [""ACE_packingBandage"",10]; this addItemCargoGlobal [""ACE_Morphine"",20]; this addItemCargoGlobal [""ACE_atropine"",20]; this addItemCargoGlobal [""ACE_epinephrine"",20]; this addItemCargoGlobal [""ACE_salineIV"",20];     this addItemCargoGlobal [""ACE_personalAidKit"",20]; this addItemCargoGlobal [""Toolkit"",1];    };}";
 				name="HMMV5";
 				description="Charlie";
 			};
@@ -13359,7 +13360,7 @@ class Mission
 						skill=0.60000002;
 						rank="CORPORAL";
 						init="(group this) setGroupId [""Alpha""]; id = [""ALPHABLUE"", this] execVM ""scripts\Teams.sqf"";";
-						description="Alpha BLUE - AT Specialist (Titan)";
+						description="Alpha BLUE - AT Specialist (MAAWS)";
 						isPlayable=1;
 					};
 					id=763;
@@ -16720,7 +16721,7 @@ class Mission
 						skill=0.60000002;
 						rank="CORPORAL";
 						init="(group this) setGroupId [""Bravo""]; id = [""BRAVOBLUE"", this] execVM ""scripts\Teams.sqf"";";
-						description="Bravo BLUE - AT Specialist (Titan)";
+						description="Bravo BLUE - AT Specialist (MAAWS)";
 						isPlayable=1;
 					};
 					id=898;
@@ -21592,7 +21593,7 @@ class Mission
 						skill=0.60000002;
 						rank="CORPORAL";
 						init="(group this) setGroupId [""Charlie""]; id = [""GREEN"", this] execVM ""scripts\Teams.sqf""; ";
-						description="Charlie GREEN - AT Specialist (Titan)";
+						description="Charlie GREEN - AT Specialist (MAAWS)";
 						isPlayable=1;
 					};
 					id=1146;

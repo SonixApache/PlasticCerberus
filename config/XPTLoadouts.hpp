@@ -147,7 +147,7 @@ class loadouts
 		linkedItems[] = {"ItemMap", "ItemCompass", "ItemWatch", "ItemRadio", "ItemMicroDAGR"}; 
 		uniformItems[] = {{"ACE_Banana",1},{"FHQ_optic_AC11704",1},{"HandGrenade", 2}}; 
 		vestItems[] = {{"hlc_30rnd_556x45_M", 8}, {"SmokeShell",2},{"SmokeShellBlue",1}}; 
-		backpackItems[] = {{"ACE_quikclot",8}, {"ACE_elasticBandage",6},{"ACE_packingBandage",2},{"ACE_bloodIV_250",1},{"ACE_tourniquet",1},{"ACE_morphine",2},{"ACE_epinephrine",1},{"Titan_AT",1},{"hlc_200rnd_556x45_M_SAW",1},{"1Rnd_HE_Grenade_shell",5},{"30Rnd_556x45_Stanag_Tracer_Yellow",10}}; 
+		backpackItems[] = {{"ACE_quikclot",8}, {"ACE_elasticBandage",6},{"ACE_packingBandage",2},{"ACE_bloodIV_250",1},{"ACE_tourniquet",1},{"ACE_morphine",2},{"ACE_epinephrine",1},{"CUP_MAAWS_HEAT_M",1},{"hlc_200rnd_556x45_M_SAW",1},{"1Rnd_HE_Grenade_shell",5},{"30Rnd_556x45_Stanag_Tracer_Yellow",10}}; 
 		
 		basicMedUniform[] = {}; 
 		basicMedVest[] = {}; 
@@ -226,9 +226,9 @@ class loadouts
 	{
 		displayName = "AT Specialist"; 
 		
-		weapons[] = {"CUP_arifle_Mk16_STD_FG_black", "launch_I_Titan_short_F", "hgun_Pistol_heavy_01_F", "Binocular"}; 
+		weapons[] = {"CUP_arifle_Mk16_STD_FG_black", "CUP_launch_MAAWS", "hgun_Pistol_heavy_01_F", "Binocular"}; 
 		primaryWeaponItems[] = {"CUP_muzzle_snds_SCAR_L", "acc_pointer_IR", "optic_Hamr","hlc_30rnd_556x45_M"}; 
-		secondaryWeaponItems[] = {"Titan_AT"}; 
+		secondaryWeaponItems[] = {"CUP_optic_MAAWS_Scope","CUP_MAAWS_HEAT_M"}; 
 		handgunItems[] = {"optic_MRD","11Rnd_45ACP_Mag"}; 
 		
 		uniformClass = "TFA_wood";
