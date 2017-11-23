@@ -10,7 +10,7 @@ class loadouts
 		displayName = "Squadleader"; 
 		
 		weapons[] = {"CUP_arifle_Mk16_STD_EGLM_black", "", "hgun_Pistol_heavy_01_F", "Binocular"}; 
-		primaryWeaponItems[] = {"CUP_muzzle_snds_SCAR_L", "acc_pointer_IR", "optic_Hamr","hlc_30rnd_556x45_M","1Rnd_HE_Grenade_shell"}; 
+		primaryWeaponItems[] = {"CUP_muzzle_snds_SCAR_L", "acc_pointer_IR","bipod_01_F_blk", "optic_Hamr","hlc_30rnd_556x45_M","1Rnd_HE_Grenade_shell"}; 
 		secondaryWeaponItems[] = {""}; 
 		handgunItems[] = {"optic_MRD","11Rnd_45ACP_Mag"}; 
 		
@@ -72,7 +72,7 @@ class loadouts
 		displayName = "Rifleman AT"; 
 		
 		weapons[] = {"CUP_arifle_Mk16_STD_FG_black", "CUP_launch_M136", "hgun_Pistol_heavy_01_F", "Binocular"}; 
-		primaryWeaponItems[] = {"CUP_muzzle_snds_SCAR_L", "acc_pointer_IR", "optic_Hamr","hlc_30rnd_556x45_M"}; 
+		primaryWeaponItems[] = {"CUP_muzzle_snds_SCAR_L", "acc_pointer_IR","bipod_01_F_blk", "optic_Hamr","hlc_30rnd_556x45_M"}; 
 		secondaryWeaponItems[] = {"CUP_M136_M"}; 
 		handgunItems[] = {"optic_MRD","11Rnd_45ACP_Mag"}; 
 		
@@ -103,7 +103,7 @@ class loadouts
 		displayName = "Engineer"; 
 		
 		weapons[] = {"CUP_arifle_Mk16_STD_FG_black", "", "hgun_Pistol_heavy_01_F", "Binocular"}; 
-		primaryWeaponItems[] = {"CUP_muzzle_snds_SCAR_L", "acc_pointer_IR", "optic_Hamr","hlc_30rnd_556x45_M"}; 
+		primaryWeaponItems[] = {"CUP_muzzle_snds_SCAR_L", "acc_pointer_IR","bipod_01_F_blk", "optic_Hamr","hlc_30rnd_556x45_M"}; 
 		secondaryWeaponItems[] = {""}; 
 		handgunItems[] = {"optic_MRD","11Rnd_45ACP_Mag"}; 
 		
@@ -134,7 +134,7 @@ class loadouts
 		displayName = "Ammobearer"; 
 		
 		weapons[] = {"CUP_arifle_Mk16_STD_FG_black", "", "hgun_Pistol_heavy_01_F", "Binocular"}; 
-		primaryWeaponItems[] = {"CUP_muzzle_snds_SCAR_L", "acc_pointer_IR", "optic_Hamr","hlc_30rnd_556x45_M"}; 
+		primaryWeaponItems[] = {"CUP_muzzle_snds_SCAR_L", "acc_pointer_IR","bipod_01_F_blk", "optic_Hamr","hlc_30rnd_556x45_M"}; 
 		secondaryWeaponItems[] = {""}; 
 		handgunItems[] = {"optic_MRD","11Rnd_45ACP_Mag"}; 
 		
@@ -165,7 +165,7 @@ class loadouts
 		displayName = "Grenadier"; 
 		
 		weapons[] = {"CUP_arifle_Mk16_STD_EGLM_black", "", "hgun_Pistol_heavy_01_F", "Binocular"}; 
-		primaryWeaponItems[] = {"CUP_muzzle_snds_SCAR_L", "acc_pointer_IR", "optic_Hamr","hlc_30rnd_556x45_M","1Rnd_HE_Grenade_shell"}; 
+		primaryWeaponItems[] = {"CUP_muzzle_snds_SCAR_L", "acc_pointer_IR","bipod_01_F_blk", "optic_Hamr","hlc_30rnd_556x45_M","1Rnd_HE_Grenade_shell"}; 
 		secondaryWeaponItems[] = {""}; 
 		handgunItems[] = {"optic_MRD","11Rnd_45ACP_Mag"}; 
 		
@@ -196,7 +196,7 @@ class loadouts
 		displayName = "Teamleader"; 
 		
 		weapons[] = {"CUP_arifle_Mk16_STD_EGLM_black", "", "hgun_Pistol_heavy_01_F", "Binocular"}; 
-		primaryWeaponItems[] = {"CUP_muzzle_snds_SCAR_L", "acc_pointer_IR", "optic_Hamr","hlc_30rnd_556x45_M","1Rnd_HE_Grenade_shell"}; 
+		primaryWeaponItems[] = {"CUP_muzzle_snds_SCAR_L", "acc_pointer_IR","bipod_01_F_blk", "optic_Hamr","hlc_30rnd_556x45_M","1Rnd_HE_Grenade_shell"}; 
 		secondaryWeaponItems[] = {""}; 
 		handgunItems[] = {"optic_MRD","11Rnd_45ACP_Mag"}; 
 		
@@ -227,7 +227,7 @@ class loadouts
 		displayName = "AT Specialist"; 
 		
 		weapons[] = {"CUP_arifle_Mk16_STD_FG_black", "CUP_launch_MAAWS", "hgun_Pistol_heavy_01_F", "Binocular"}; 
-		primaryWeaponItems[] = {"CUP_muzzle_snds_SCAR_L", "acc_pointer_IR", "optic_Hamr","hlc_30rnd_556x45_M"}; 
+		primaryWeaponItems[] = {"CUP_muzzle_snds_SCAR_L", "acc_pointer_IR","bipod_01_F_blk", "optic_Hamr","hlc_30rnd_556x45_M"}; 
 		secondaryWeaponItems[] = {"CUP_optic_MAAWS_Scope","CUP_MAAWS_HEAT_M"}; 
 		handgunItems[] = {"optic_MRD","11Rnd_45ACP_Mag"}; 
 		
@@ -258,7 +258,7 @@ class loadouts
 		displayName = "Marksman (Marksman DLC)"; 
 		
 		weapons[] = {"hlc_rifle_SAMR", "", "hgun_Pistol_heavy_01_F", "Rangefinder"}; 
-		primaryWeaponItems[] = {"hlc_muzzle_556NATO_KAC", "acc_pointer_IR", ."optic_AMS_khk","hlc_30rnd_556x45_M"}; 
+		primaryWeaponItems[] = {"hlc_muzzle_556NATO_KAC", "acc_pointer_IR", "optic_AMS_khk","hlc_30rnd_556x45_M"}; 
 		secondaryWeaponItems[] = {""}; 
 		handgunItems[] = {"optic_MRD","11Rnd_45ACP_Mag"}; 
 		
@@ -289,7 +289,7 @@ class loadouts
 		displayName = "Medic"; 
 		
 		weapons[] = {"CUP_arifle_Mk16_STD_FG_black", "", "hgun_Pistol_heavy_01_F", "Binocular"}; 
-		primaryWeaponItems[] = {"CUP_muzzle_snds_SCAR_L", "acc_pointer_IR", "optic_Hamr","hlc_30rnd_556x45_M"}; 
+		primaryWeaponItems[] = {"CUP_muzzle_snds_SCAR_L", "acc_pointer_IR","bipod_01_F_blk", "optic_Hamr","hlc_30rnd_556x45_M"}; 
 		secondaryWeaponItems[] = {""}; 
 		handgunItems[] = {"optic_MRD","11Rnd_45ACP_Mag"}; 
 		
