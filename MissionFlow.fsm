@@ -2,7 +2,7 @@
 /*%FSM<HEAD>*/
 /*
 item0[] = {"init",0,250,-17.363007,-221.679535,62.753265,-180.981949,0.000000,"init"};
-item1[] = {"ifServer",4,218,-148.952835,-219.533905,-58.952820,-169.533905,0.000000,"ifServer"};
+item1[] = {"ifServer",4,4314,-148.952835,-219.533905,-58.952820,-169.533905,0.000000,"ifServer"};
 item2[] = {"not__a_server_",1,250,-266.104004,-220.115280,-176.103973,-170.115295,0.000000,"not " \n "a server" \n ""};
 item3[] = {"count_lving_players",4,218,-42.522003,184.838211,67.571655,287.955383,0.000000,"count lving" \n "players" \n "in airfield"};
 item4[] = {"true",8,218,7.292877,-160.198578,44.458923,-136.949936,0.000000,"true"};
@@ -13,7 +13,7 @@ item8[] = {"tank_retrieved_",4,218,-321.192688,-28.519669,-169.014801,38.008682,
 item9[] = {"Is_general_dead",4,218,184.793900,66.683319,336.971802,133.211670,0.000000,"Is general dead?"};
 item10[] = {"true",8,218,215.957947,-133.241852,305.957947,-83.241837,0.000000,"true"};
 item11[] = {"true",8,218,-147.145508,-59.218613,-57.145508,-9.218597,0.000000,"true"};
-item12[] = {"Set__correct__en",2,4346,-37.279602,312.455963,52.720398,362.455963,0.000000,"Set " \n "correct " \n "ending"};
+item12[] = {"Set__correct__en",2,250,-37.279602,312.455963,52.720398,362.455963,0.000000,"Set " \n "correct " \n "ending"};
 item13[] = {"set_general_dead",2,250,228.424988,-36.622025,318.424988,13.377991,0.000000,"set" \n "general" \n "dead"};
 item14[] = {"set__tank__retri",2,250,-321.684692,-103.632599,-231.684631,-53.632584,0.000000,"set" \n " tank" \n " retrieved"};
 item15[] = {"variables",2,250,-20.916504,-119.216370,69.083511,-69.216370,0.000000,"variables"};
@@ -59,7 +59,7 @@ link28[] = {22,7};
 link29[] = {23,7};
 link30[] = {24,7};
 link31[] = {25,7};
-globals[] = {0.000000,0,0,0,0,640,480,1,37,6316128,1,-488.553192,350.636719,755.816406,67.010529,1077,884,1};
+globals[] = {0.000000,0,0,0,0,640,480,1,37,6316128,1,-456.601196,382.588806,402.056183,-286.749725,1077,884,1};
 window[] = {2,-1,-1,-1,-1,1008,130,1570,130,3,1095};
 *//*%FSM</HEAD>*/
 class FSM
@@ -94,7 +94,7 @@ class FSM
                                         priority = 0.000000;
                                         to="not__a_server_";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"ifServer"/*%FSM</CONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!isServer"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
@@ -176,7 +176,7 @@ class FSM
                                         priority = 0.000000;
                                         to="show_loser_endin";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"{ alive _x } count _playercount <= 0"/*%FSM</CONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"time > _timeOut && { alive _x } count (playableUnits+switchableUnits) <= 0"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
@@ -187,7 +187,7 @@ class FSM
                                         priority = 0.000000;
                                         to="Set__correct__en";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"time > _timeOut && {alive _x} count (list ENDTRIGZERO) > count (_playerArray) / 2"/*%FSM</CONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"time > _timeOut && {alive _x} count (list ENDTRIGZERO) > count (playableUnits+switchableUnits) / 2"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
@@ -314,8 +314,7 @@ class FSM
                 {
                         name = "variables";
                         itemno = 15;
-                        init = /*%FSM<STATEINIT""">*/"_playerCount = count (playableUnits+switchableUnits);" \n
-                         "_endUnits = list ENDTRIGZERO;" \n
+                        init = /*%FSM<STATEINIT""">*/"_endUnits = list ENDTRIGZERO;" \n
                          "_tankexploded = False;" \n
                          "_tankretrieved = False;" \n
                          "_generaldead = False;" \n
