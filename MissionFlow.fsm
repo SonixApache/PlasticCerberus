@@ -18,7 +18,7 @@ item13[] = {"set_general_dead",2,250,196.082886,-53.255096,286.082886,-3.255081,
 item14[] = {"set__tank__retri",2,250,-321.684692,-103.632599,-231.684631,-53.632584,0.000000,"set" \n " tank" \n " retrieved"};
 item15[] = {"variables",2,250,-20.916504,-119.216370,69.083511,-69.216370,0.000000,"variables"};
 item16[] = {"true",8,218,-5.332672,-45.193115,53.499634,-17.010483,0.000000,"true"};
-item17[] = {"AA_in__area_1__d",4,4314,196.598694,72.341385,286.598694,122.341377,0.000000,"AA in " \n "area 1 " \n "dead"};
+item17[] = {"Novy_ZU_23_Is_de",4,218,196.598694,72.341385,280.130310,139.898514,0.000000,"Novy ZU-23" \n "Is dead"};
 item18[] = {"tank_ded_",4,218,-352.640625,119.400627,-262.640625,169.400635,0.000000,"tank ded?"};
 item19[] = {"kill_task_rip_ta",2,250,-368.790802,44.876831,-278.790771,94.876831,0.000000,"kill task" \n "rip tank"};
 item20[] = {"show_loser_endin",1,250,-370.871246,369.888184,-280.871216,419.888123,0.000000,"show" \n "loser" \n "ending"};
@@ -28,9 +28,9 @@ item23[] = {"general_dead___tank",4,218,-261.029083,425.438965,-132.069489,522.9
 item24[] = {"general_dead___",4,218,-121.553741,424.659698,7.405853,522.190186,0.000000,"general dead" \n "&" \n "!tank retrieved"};
 item25[] = {"__general_dead_",4,218,16.363342,424.659729,145.322937,522.190308,0.000000,"!general dead" \n "&" \n "tank retrieved"};
 item26[] = {"__general_dead__1",4,218,144.150879,423.101379,273.110474,520.631958,0.000000,"!general dead" \n "&" \n "!tank retrieved"};
-item27[] = {"spawn_chopper_for",2,250,325.043274,104.683456,415.043274,154.683456,0.000000,"spawn" \n "chopper" \n "for area 1"};
+item27[] = {"spawn_chopper_for",2,4346,325.043274,104.683456,415.043274,154.683456,0.000000,"spawn" \n "chopper" \n "for area 1"};
 item28[] = {"true",8,218,226.168823,174.912033,316.168823,224.912048,0.000000,"true"};
-item29[] = {"AA_in__area_2_de",4,218,-121.277946,146.266251,-31.277954,196.266266,0.000000,"AA in " \n "area 2" \n "dead"};
+item29[] = {"Vybor_ZU_23_Is_d",4,218,-121.277946,146.266251,-31.277954,196.266266,0.000000,"Vybor ZU-23" \n "Is dead"};
 item30[] = {"spawn_chopper_for_1",2,250,-217.379852,205.406158,-127.380051,255.406128,0.000000,"spawn" \n "chopper" \n "for area 2"};
 item31[] = {"true",8,218,-167.480865,163.823380,-132.924438,185.177521,0.000000,"true"};
 link0[] = {0,1};
@@ -73,7 +73,7 @@ link36[] = {28,5};
 link37[] = {29,30};
 link38[] = {30,31};
 link39[] = {31,5};
-globals[] = {0.000000,0,0,0,0,640,480,1,43,6316128,1,-465.307312,529.905518,619.434937,-197.433853,1077,884,1};
+globals[] = {0.000000,0,0,0,0,640,480,1,43,6316128,1,-465.307312,529.905518,545.195557,-271.673737,1077,884,1};
 window[] = {2,-1,-1,-1,-1,1008,130,1570,130,3,1095};
 *//*%FSM</HEAD>*/
 class FSM
@@ -171,14 +171,14 @@ class FSM
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
-                                /*%FSM<LINK "AA_in__area_1__d">*/
-                                class AA_in__area_1__d
+                                /*%FSM<LINK "Novy_ZU_23_Is_de">*/
+                                class Novy_ZU_23_Is_de
                                 {
                                         itemno = 17;
                                         priority = 0.000000;
                                         to="spawn_chopper_for";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"!_airsupport1 && !alive Shilka2"/*%FSM</CONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"time > _timeOut && !_airsupport1 && !alive zusi1"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
@@ -204,14 +204,14 @@ class FSM
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
-                                /*%FSM<LINK "AA_in__area_2_de">*/
-                                class AA_in__area_2_de
+                                /*%FSM<LINK "Vybor_ZU_23_Is_d">*/
+                                class Vybor_ZU_23_Is_d
                                 {
                                         itemno = 29;
                                         priority = 0.000000;
                                         to="spawn_chopper_for_1";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"!_airsupport2 && !alive Shilka3"/*%FSM</CONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"time > _timeOut && !_airsupport2 && !alive zusi2"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
@@ -361,8 +361,8 @@ class FSM
                          "_tankexploded = False;" \n
                          "_tankretrieved = False;" \n
                          "_generaldead = False;" \n
-                         "_airsupport1 = False" \n
-                         "_airsupport2 = False" \n
+                         "_airsupport1 = False;" \n
+                         "_airsupport2 = False;" \n
                          "_ending = ""loser"";" \n
                          "systemchat ""variables set"";"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
@@ -425,12 +425,23 @@ class FSM
                         name = "spawn_chopper_for";
                         itemno = 27;
                         init = /*%FSM<STATEINIT""">*/"_airsupport1 = True;" \n
-                         "NovyChopEvent = [getMarkerPos ""NorthOfNovySobor"", 0, ""CUP_B_UH60M_US"", WEST] call bis_fnc_spawnvehicle; " \n
-                         "wpNovy = (NovyChopEvent select 2) addWaypoint [getMarkerPos ""OfficerMarker"", 0]; " \n
-                         "wpNovy setWaypointBehaviour ""COMBAT""; " \n
-                         "wpNovy setWaypointCombatMode ""RED""; " \n
-                         "wpNovy setWaypointType ""SAD"";" \n
-                         """AA disabled! Light CAS on the way to Novy Sobor!"" remoteExecCall[""hint"", 0];"/*%FSM</STATEINIT""">*/;
+                         "_targetdir = getMarkerPos ""NorthOfNovySobor"" getdir getmarkerpos ""OfficerMarker"";" \n
+                         "_NovyChopEvent = [getMarkerPos ""NorthOfNovySobor"", _targetdir, ""CUP_B_UH1Y_Gunship_Dynamic_USMC"", WEST] call bis_fnc_spawnvehicle; " \n
+                         "_NovyChopper = (_NovyChopEvent select 0); " \n
+                         "_NovyChopperGroup = (_NovyChopEvent select 2);" \n
+                         "{_x setUnitRank ""COLONEL""; _x setUnitAbility 1; } foreach units _NovyChopperGroup;" \n
+                         "_NovyChopper allowCrewInImmobile true;" \n
+                         "_NovyChopper setVehicleLock ""LOCKED"";" \n
+                         "_NovyChopper setUnloadInCombat [false, false];" \n
+                         "_closeUnits = []; " \n
+                         "{ if (getmarkerpos ""OfficerMarker"" distance _x < 400) then {  _closeUnits pushBack _x; }; }forEach allUnits;" \n
+                         "{_NovyChopperGroup reveal [_x,4]} foreach _closeUnits;" \n
+                         "_wpNovy = _NovyChopperGroup addWaypoint [getMarkerPos ""OfficerMarker"", 0]; " \n
+                         "_wpNovy setWaypointBehaviour ""COMBAT""; " \n
+                         "_wpNovy setWaypointCombatMode ""RED""; " \n
+                         "_wpNovy setWaypointType ""SAD"";" \n
+                         """AA disabled! Light CAS on the way to Novy Sobor!"" remoteExecCall[""hint"", 0];" \n
+                         "systemchat ""AIR SUPPORT NUMBER 1"";"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
@@ -454,12 +465,23 @@ class FSM
                         name = "spawn_chopper_for_1";
                         itemno = 30;
                         init = /*%FSM<STATEINIT""">*/"_airsupport2 = True;" \n
-                         "VyborChopEvent = [getMarkerPos ""WestOfVybor"", 0, ""CUP_B_UH60M_US"", WEST] call bis_fnc_spawnvehicle; " \n
-                         "wpVybor = (VyborChopEvent select 2) addWaypoint [getMarkerPos ""VyborMarker"", 0]; " \n
-                         "wpVybor setWaypointBehaviour ""COMBAT""; " \n
-                         "wpVybor setWaypointCombatMode ""RED""; " \n
-                         "wpVybor setWaypointType ""SAD"";" \n
-                         """AA disabled! Light CAS on the way to Pushtoshka!"" remoteExecCall[""hint"", 0]"/*%FSM</STATEINIT""">*/;
+                         "_targetdir = getMarkerPos ""WestOfVybor"" getdir getmarkerpos ""VyborMarker"";" \n
+                         "_VyborChopEvent = [getMarkerPos ""WestOfVybor"", _targetdir, ""CUP_B_MH60L_DAP_2x_US"", WEST] call bis_fnc_spawnvehicle; " \n
+                         "_VyborChopper = (_VyborChopEvent select 0); " \n
+                         "_VyborChopperGroup = (_VyborChopEvent select 2);" \n
+                         "{_x setUnitRank ""COLONEL""; _x setUnitAbility 1;} foreach units _VyborChopperGroup;" \n
+                         "_VyborChopper allowCrewInImmobile true;" \n
+                         "_VyborChopper setVehicleLock ""LOCKED"";" \n
+                         "_VyborChopper setUnloadInCombat [false, false];" \n
+                         "_closeUnits = []; " \n
+                         "{ if (getmarkerpos ""VyborMarker"" distance _x < 300) then {  _closeUnits pushBack _x; }; }forEach allUnits;" \n
+                         "{_NovyChopperGroup reveal [_x,4]} foreach _closeUnits;" \n
+                         "_wpVybor = _VyborChopperGroup addWaypoint [getMarkerPos ""VyborMarker"", 0]; " \n
+                         "_wpVybor setWaypointBehaviour ""COMBAT""; " \n
+                         "_wpVybor setWaypointCombatMode ""RED""; " \n
+                         "_wpVybor setWaypointType ""SAD"";" \n
+                         """AA disabled! Light CAS on the way to Pushtoshka!"" remoteExecCall[""hint"", 0];" \n
+                         "systemchat ""AIR SUPPORT NUMBER 2"";"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
