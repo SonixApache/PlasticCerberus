@@ -369,15 +369,10 @@ class AddonsMetaData
 	};
 };
 randomSeed=11159573;
-class ScenarioData
-{
-	author="SonixApache";
-};
 class Mission
 {
 	class Intel
 	{
-		briefingName="Plastic Cerberus 0.9b";
 		resistanceWest=0;
 		timeOfChanges=1800.0002;
 		startWeather=0.25;
@@ -21354,7 +21349,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8292.5449,292.01471,6001.085};
-						angles[]={-0,1.716828,6.2818937};
+						angles[]={0,1.716828,6.2818937};
 					};
 					side="West";
 					flags=6;
@@ -21437,7 +21432,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8292.4365,292.01486,6000.0645};
-						angles[]={-0,1.7168367,6.2818937};
+						angles[]={0,1.7168367,6.2818937};
 					};
 					side="West";
 					flags=4;
@@ -21457,7 +21452,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8291.1748,292.01654,6000.2192};
-						angles[]={-0,1.7168367,6.2818937};
+						angles[]={0,1.7168367,6.2818937};
 					};
 					side="West";
 					flags=4;
@@ -21477,7 +21472,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8289.667,292.01855,6000.417};
-						angles[]={-0,1.7168367,6.2818937};
+						angles[]={0,1.7168367,6.2818937};
 					};
 					side="West";
 					flags=4;
