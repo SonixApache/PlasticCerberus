@@ -2,31 +2,37 @@
 /*%FSM<HEAD>*/
 /*
 item0[] = {"init",0,250,-17.363007,-221.679535,62.753265,-180.981949,0.000000,"init"};
-item1[] = {"ifServer",4,4314,-148.952835,-219.533905,-58.952820,-169.533905,0.000000,"ifServer"};
+item1[] = {"ifServer",4,218,-148.952835,-219.533905,-58.952820,-169.533905,0.000000,"ifServer"};
 item2[] = {"not__a_server_",1,250,-266.104004,-220.115280,-176.103973,-170.115295,0.000000,"not " \n "a server" \n ""};
 item3[] = {"count_lving_players",4,218,-42.522003,184.838211,67.571655,287.955383,0.000000,"count lving" \n "players" \n "in airfield"};
 item4[] = {"true",8,218,7.292877,-160.198578,44.458923,-136.949936,0.000000,"true"};
 item5[] = {"big_fuckin_loop",2,250,-26.904755,52.878433,63.095261,102.878433,0.000000,"big" \n "fuckin" \n "loop"};
-item6[] = {"Timeout",4,218,157.344574,183.494400,247.344574,233.494415,0.000000,"Timeout"};
+item6[] = {"Timeout",4,218,26.292206,122.210922,116.292213,172.210938,0.000000,"Timeout"};
 item7[] = {"Show_correct_ending",1,250,-55.748322,648.133667,34.251709,698.133545,0.000000,"Show" \n "correct" \n "ending" \n ""};
 item8[] = {"tank_retrieved_",4,218,-321.192688,-28.519669,-169.014801,38.008682,0.000000,"tank retrieved" \n "& not ded?"};
-item9[] = {"Is_general_dead",4,218,184.793900,66.683319,336.971802,133.211670,0.000000,"Is general dead?"};
-item10[] = {"true",8,218,215.957947,-133.241852,305.957947,-83.241837,0.000000,"true"};
+item9[] = {"Is_general_dead",4,218,83.147293,6.619400,235.325195,73.147751,0.000000,"Is general dead?"};
+item10[] = {"true",8,218,65.795837,-43.307808,155.795837,6.692207,0.000000,"true"};
 item11[] = {"true",8,218,-147.145508,-59.218613,-57.145508,-9.218597,0.000000,"true"};
 item12[] = {"Set__correct__en",2,250,-37.279602,312.455963,52.720398,362.455963,0.000000,"Set " \n "correct " \n "ending"};
-item13[] = {"set_general_dead",2,250,228.424988,-36.622025,318.424988,13.377991,0.000000,"set" \n "general" \n "dead"};
+item13[] = {"set_general_dead",2,250,196.082886,-53.255096,286.082886,-3.255081,0.000000,"set" \n "general" \n "dead"};
 item14[] = {"set__tank__retri",2,250,-321.684692,-103.632599,-231.684631,-53.632584,0.000000,"set" \n " tank" \n " retrieved"};
 item15[] = {"variables",2,250,-20.916504,-119.216370,69.083511,-69.216370,0.000000,"variables"};
 item16[] = {"true",8,218,-5.332672,-45.193115,53.499634,-17.010483,0.000000,"true"};
-item17[] = {"tank_ded_",4,218,-285.184296,148.046509,-195.184280,198.046509,0.000000,"tank ded?"};
-item18[] = {"kill_task_rip_ta",2,250,-286.549469,76.294891,-196.549438,126.294891,0.000000,"kill task" \n "rip tank"};
-item19[] = {"show_loser_endin",1,250,-316.351654,271.937866,-226.351685,321.937805,0.000000,"show" \n "loser" \n "ending"};
-item20[] = {"everyone_is_dead",4,218,-165.188446,174.538879,-61.162994,248.693848,0.000000,"everyone" \n "is" \n "dead"};
-item21[] = {"true",8,218,-161.292480,66.231140,-105.576927,102.984833,0.000000,"true"};
-item22[] = {"general_dead___tank",4,218,-261.029083,425.438965,-132.069489,522.969604,0.000000,"general dead" \n "&" \n "tank retrieved"};
-item23[] = {"general_dead___",4,218,-121.553741,424.659698,7.405853,522.190186,0.000000,"general dead" \n "&" \n "!tank retrieved"};
-item24[] = {"__general_dead_",4,218,16.363342,424.659729,145.322937,522.190308,0.000000,"!general dead" \n "&" \n "tank retrieved"};
-item25[] = {"__general_dead__1",4,218,144.150879,423.101379,273.110474,520.631958,0.000000,"!general dead" \n "&" \n "!tank retrieved"};
+item17[] = {"AA_in__area_1__d",4,4314,196.598694,72.341385,286.598694,122.341377,0.000000,"AA in " \n "area 1 " \n "dead"};
+item18[] = {"tank_ded_",4,218,-352.640625,119.400627,-262.640625,169.400635,0.000000,"tank ded?"};
+item19[] = {"kill_task_rip_ta",2,250,-368.790802,44.876831,-278.790771,94.876831,0.000000,"kill task" \n "rip tank"};
+item20[] = {"show_loser_endin",1,250,-370.871246,369.888184,-280.871216,419.888123,0.000000,"show" \n "loser" \n "ending"};
+item21[] = {"everyone_is_dead",4,218,-167.036545,299.286987,-63.011078,373.441956,0.000000,"everyone" \n "is" \n "dead"};
+item22[] = {"true",8,218,-161.292480,66.231140,-105.576927,102.984833,0.000000,"true"};
+item23[] = {"general_dead___tank",4,218,-261.029083,425.438965,-132.069489,522.969604,0.000000,"general dead" \n "&" \n "tank retrieved"};
+item24[] = {"general_dead___",4,218,-121.553741,424.659698,7.405853,522.190186,0.000000,"general dead" \n "&" \n "!tank retrieved"};
+item25[] = {"__general_dead_",4,218,16.363342,424.659729,145.322937,522.190308,0.000000,"!general dead" \n "&" \n "tank retrieved"};
+item26[] = {"__general_dead__1",4,218,144.150879,423.101379,273.110474,520.631958,0.000000,"!general dead" \n "&" \n "!tank retrieved"};
+item27[] = {"spawn_chopper_for",2,250,325.043274,104.683456,415.043274,154.683456,0.000000,"spawn" \n "chopper" \n "for area 1"};
+item28[] = {"true",8,218,226.168823,174.912033,316.168823,224.912048,0.000000,"true"};
+item29[] = {"AA_in__area_2_de",4,218,-121.277946,146.266251,-31.277954,196.266266,0.000000,"AA in " \n "area 2" \n "dead"};
+item30[] = {"spawn_chopper_for_1",2,250,-217.379852,205.406158,-127.380051,255.406128,0.000000,"spawn" \n "chopper" \n "for area 2"};
+item31[] = {"true",8,218,-167.480865,163.823380,-132.924438,185.177521,0.000000,"true"};
 link0[] = {0,1};
 link1[] = {0,4};
 link2[] = {1,2};
@@ -37,29 +43,37 @@ link6[] = {5,6};
 link7[] = {5,8};
 link8[] = {5,9};
 link9[] = {5,17};
-link10[] = {5,20};
-link11[] = {6,5};
-link12[] = {8,14};
-link13[] = {9,13};
-link14[] = {10,5};
-link15[] = {11,5};
-link16[] = {12,22};
-link17[] = {12,23};
-link18[] = {12,24};
-link19[] = {12,25};
-link20[] = {13,10};
-link21[] = {14,11};
-link22[] = {15,16};
-link23[] = {16,5};
-link24[] = {17,18};
-link25[] = {18,21};
-link26[] = {20,19};
-link27[] = {21,5};
-link28[] = {22,7};
-link29[] = {23,7};
-link30[] = {24,7};
-link31[] = {25,7};
-globals[] = {0.000000,0,0,0,0,640,480,1,37,6316128,1,-456.601196,382.588806,402.056183,-286.749725,1077,884,1};
+link10[] = {5,18};
+link11[] = {5,21};
+link12[] = {5,29};
+link13[] = {6,5};
+link14[] = {8,14};
+link15[] = {9,13};
+link16[] = {10,5};
+link17[] = {11,5};
+link18[] = {12,23};
+link19[] = {12,24};
+link20[] = {12,25};
+link21[] = {12,26};
+link22[] = {13,10};
+link23[] = {14,11};
+link24[] = {15,16};
+link25[] = {16,5};
+link26[] = {17,27};
+link27[] = {18,19};
+link28[] = {19,22};
+link29[] = {21,20};
+link30[] = {22,5};
+link31[] = {23,7};
+link32[] = {24,7};
+link33[] = {25,7};
+link34[] = {26,7};
+link35[] = {27,28};
+link36[] = {28,5};
+link37[] = {29,30};
+link38[] = {30,31};
+link39[] = {31,5};
+globals[] = {0.000000,0,0,0,0,640,480,1,43,6316128,1,-465.307312,529.905518,619.434937,-197.433853,1077,884,1};
 window[] = {2,-1,-1,-1,-1,1008,130,1570,130,3,1095};
 *//*%FSM</HEAD>*/
 class FSM
@@ -118,9 +132,8 @@ class FSM
                 {
                         name = "big_fuckin_loop";
                         itemno = 5;
-                        init = /*%FSM<STATEINIT""">*/"" \n
-                         "systemChat ""Condition Loop"";" \n
-                         "_timeout = time + 30;" \n
+                        init = /*%FSM<STATEINIT""">*/"systemChat ""Condition Loop"";" \n
+                         "_timeout = time + 2;" \n
                          "true;"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
@@ -133,7 +146,7 @@ class FSM
                                         to="big_fuckin_loop";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
                                         condition=/*%FSM<CONDITION""">*/"time > _timeout;"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                        action=/*%FSM<ACTION""">*/"systemchat ""timeout"";"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
                                 /*%FSM<LINK "tank_retrieved_">*/
@@ -143,7 +156,7 @@ class FSM
                                         priority = 0.000000;
                                         to="set__tank__retri";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"time > _timeOut && !_tankexploded && OBJtank in list ENDTRIGZERO;"/*%FSM</CONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"time > _timeOut && !_tankretrieved && !_tankexploded && OBJtank in list ENDTRIGZERO;"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
@@ -154,29 +167,51 @@ class FSM
                                         priority = 0.000000;
                                         to="set_general_dead";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"time > _timeOut && !alive GeneEricman"/*%FSM</CONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"time > _timeOut && !alive GeneEricman && !_generaldead"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "AA_in__area_1__d">*/
+                                class AA_in__area_1__d
+                                {
+                                        itemno = 17;
+                                        priority = 0.000000;
+                                        to="spawn_chopper_for";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!_airsupport1 && !alive Shilka2"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
                                 /*%FSM<LINK "tank_ded_">*/
                                 class tank_ded_
                                 {
-                                        itemno = 17;
+                                        itemno = 18;
                                         priority = 0.000000;
                                         to="kill_task_rip_ta";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"!alive OBJTank;"/*%FSM</CONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"time > _timeOut  && !alive OBJTank;"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
                                 /*%FSM<LINK "everyone_is_dead">*/
                                 class everyone_is_dead
                                 {
-                                        itemno = 20;
+                                        itemno = 21;
                                         priority = 0.000000;
                                         to="show_loser_endin";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
                                         condition=/*%FSM<CONDITION""">*/"time > _timeOut && { alive _x } count (playableUnits+switchableUnits) <= 0"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "AA_in__area_2_de">*/
+                                class AA_in__area_2_de
+                                {
+                                        itemno = 29;
+                                        priority = 0.000000;
+                                        to="spawn_chopper_for_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!_airsupport2 && !alive Shilka3"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
@@ -200,7 +235,7 @@ class FSM
                         name = "Show_correct_ending";
                         itemno = 7;
                         init = /*%FSM<STATEINIT""">*/"player allowdamage false;" \n
-                         "_ending call BIS_fnc_endMission;"/*%FSM</STATEINIT""">*/;
+                         "_ending call BIS_fnc_endMissionServer;"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
@@ -212,52 +247,56 @@ class FSM
                 {
                         name = "Set__correct__en";
                         itemno = 12;
-                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        init = /*%FSM<STATEINIT""">*/"systemchat ""setting ending"";"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
                                 /*%FSM<LINK "general_dead___">*/
                                 class general_dead___
                                 {
-                                        itemno = 23;
+                                        itemno = 24;
                                         priority = 0.000000;
                                         to="Show_correct_ending";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
                                         condition=/*%FSM<CONDITION""">*/"_generaldead && !_tankretrieved"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/"_ending = ""GENERALKILLED"""/*%FSM</ACTION""">*/;
+                                        action=/*%FSM<ACTION""">*/"_ending = ""GENERALKILLED"";" \n
+                                         "systemchat ""set general killed ending"";"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
                                 /*%FSM<LINK "__general_dead_">*/
                                 class __general_dead_
                                 {
-                                        itemno = 24;
+                                        itemno = 25;
                                         priority = 0.000000;
                                         to="Show_correct_ending";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
                                         condition=/*%FSM<CONDITION""">*/"!_generaldead && _tankretrieved"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/"_ending = ""TANKRETRIEVED"""/*%FSM</ACTION""">*/;
+                                        action=/*%FSM<ACTION""">*/"_ending = ""TANKRETRIEVED"";" \n
+                                         "systemchat ""set tank retrieved ending"";"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
                                 /*%FSM<LINK "__general_dead__1">*/
                                 class __general_dead__1
                                 {
-                                        itemno = 25;
+                                        itemno = 26;
                                         priority = 0.000000;
                                         to="Show_correct_ending";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"!_generaldead && _!tankretrieved"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/"_ending = ""BASEREACHED"""/*%FSM</ACTION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!_generaldead && !_tankretrieved"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/"_ending = ""BASEREACHED"";" \n
+                                         "systemchat ""set base reached ending"";"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
                                 /*%FSM<LINK "general_dead___tank">*/
                                 class general_dead___tank
                                 {
-                                        itemno = 22;
+                                        itemno = 23;
                                         priority = 0.000000;
                                         to="Show_correct_ending";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
                                         condition=/*%FSM<CONDITION""">*/"_generaldead && _tankretrieved"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/"_ending = ""BESTEND"""/*%FSM</ACTION""">*/;
+                                        action=/*%FSM<ACTION""">*/"_ending = ""BESTEND"";" \n
+                                         "systemchat ""set BEST ending"";"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
                         };
@@ -268,7 +307,9 @@ class FSM
                 {
                         name = "set_general_dead";
                         itemno = 13;
-                        init = /*%FSM<STATEINIT""">*/"_generaldead = True"/*%FSM</STATEINIT""">*/;
+                        init = /*%FSM<STATEINIT""">*/"_generaldead = True;" \n
+                         "systemchat ""general is dead"";" \n
+                         "[""GENERALTASK"", ""Succeeded"", true] call BIS_fnc_taskSetState;"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
@@ -291,7 +332,9 @@ class FSM
                 {
                         name = "set__tank__retri";
                         itemno = 14;
-                        init = /*%FSM<STATEINIT""">*/"[""VYBORTASK"", ""Succeeded"", true] call BIS_fnc_taskSetState;"/*%FSM</STATEINIT""">*/;
+                        init = /*%FSM<STATEINIT""">*/"[""VYBORTASK"", ""Succeeded"", true] call BIS_fnc_taskSetState;" \n
+                         "_tankretrieved = True;" \n
+                         "systemchat ""tank is retrieve"";"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
@@ -302,7 +345,7 @@ class FSM
                                         priority = 0.000000;
                                         to="big_fuckin_loop";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"true;"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
@@ -318,7 +361,10 @@ class FSM
                          "_tankexploded = False;" \n
                          "_tankretrieved = False;" \n
                          "_generaldead = False;" \n
-                         "_ending = ""loser"";"/*%FSM</STATEINIT""">*/;
+                         "_airsupport1 = False" \n
+                         "_airsupport2 = False" \n
+                         "_ending = ""loser"";" \n
+                         "systemchat ""variables set"";"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
@@ -340,20 +386,21 @@ class FSM
                 class kill_task_rip_ta
                 {
                         name = "kill_task_rip_ta";
-                        itemno = 18;
+                        itemno = 19;
                         init = /*%FSM<STATEINIT""">*/"[""VYBORTASK"", ""Cancelled"", true] call BIS_fnc_taskSetState;" \n
-                         "_tankexploded = True;"/*%FSM</STATEINIT""">*/;
+                         "_tankexploded = True;" \n
+                         "systemchat ""tank is explode"";"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
                                 /*%FSM<LINK "true">*/
                                 class true
                                 {
-                                        itemno = 21;
+                                        itemno = 22;
                                         priority = 0.000000;
                                         to="big_fuckin_loop";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"true;"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
@@ -364,11 +411,69 @@ class FSM
                 class show_loser_endin
                 {
                         name = "show_loser_endin";
-                        itemno = 19;
-                        init = /*%FSM<STATEINIT""">*/"_ending call BIS_fnc_endMission;"/*%FSM</STATEINIT""">*/;
+                        itemno = 20;
+                        init = /*%FSM<STATEINIT""">*/"_ending call BIS_fnc_endMissionServer;"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "spawn_chopper_for">*/
+                class spawn_chopper_for
+                {
+                        name = "spawn_chopper_for";
+                        itemno = 27;
+                        init = /*%FSM<STATEINIT""">*/"_airsupport1 = True;" \n
+                         "NovyChopEvent = [getMarkerPos ""NorthOfNovySobor"", 0, ""CUP_B_UH60M_US"", WEST] call bis_fnc_spawnvehicle; " \n
+                         "wpNovy = (NovyChopEvent select 2) addWaypoint [getMarkerPos ""OfficerMarker"", 0]; " \n
+                         "wpNovy setWaypointBehaviour ""COMBAT""; " \n
+                         "wpNovy setWaypointCombatMode ""RED""; " \n
+                         "wpNovy setWaypointType ""SAD"";" \n
+                         """AA disabled! Light CAS on the way to Novy Sobor!"" remoteExecCall[""hint"", 0];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "true">*/
+                                class true
+                                {
+                                        itemno = 28;
+                                        priority = 0.000000;
+                                        to="big_fuckin_loop";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "spawn_chopper_for_1">*/
+                class spawn_chopper_for_1
+                {
+                        name = "spawn_chopper_for_1";
+                        itemno = 30;
+                        init = /*%FSM<STATEINIT""">*/"_airsupport2 = True;" \n
+                         "VyborChopEvent = [getMarkerPos ""WestOfVybor"", 0, ""CUP_B_UH60M_US"", WEST] call bis_fnc_spawnvehicle; " \n
+                         "wpVybor = (VyborChopEvent select 2) addWaypoint [getMarkerPos ""VyborMarker"", 0]; " \n
+                         "wpVybor setWaypointBehaviour ""COMBAT""; " \n
+                         "wpVybor setWaypointCombatMode ""RED""; " \n
+                         "wpVybor setWaypointType ""SAD"";" \n
+                         """AA disabled! Light CAS on the way to Pushtoshka!"" remoteExecCall[""hint"", 0]"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "true">*/
+                                class true
+                                {
+                                        itemno = 31;
+                                        priority = 0.000000;
+                                        to="big_fuckin_loop";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
                         };
                 };
                 /*%FSM</STATE>*/

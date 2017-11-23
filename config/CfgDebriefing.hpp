@@ -25,8 +25,8 @@ class TANKRETRIEVED
 
 	class BASEREACHED
 {
-	title = "BASE REACHED";
-	subtitle = "YOU MADE IT";
+	title = "AIRFIELD REACHED";
+	subtitle = "YOU MADE IT!";
 	description = "You were unable to complete your objectives, but you made it home alive, and that's what counts.";
 };
 
