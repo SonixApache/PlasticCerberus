@@ -7,7 +7,7 @@ class ACE_Settings
 	
 	class ace_medical_amountOfReviveLives 
 	{
-		value = 20;
+		value = 10;
 	};
 	
 	class ace_medical_increaseTrainingInLocations 
@@ -17,7 +17,7 @@ class ACE_Settings
 	
 	class ace_medical_preventInstaDeath {value=1};
 	class ace_medical_enableRevive {value=1};
-	class ace_medical_maxReviveTime {value=180};
+	class ace_medical_maxReviveTime {value=360};
 	
 	class ace_repair_repairDamageThreshold //How much can untrained soldier repair vehicles?
 	{
